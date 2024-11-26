@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovaciones en Tecnología de PC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cssprinci.css"> 
+    <style>
+        /* Estilo para la cuadrícula de videos */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Tres columnas de igual ancho */
+            gap: 20px; /* Espacio entre los videos */
+            margin-top: 20px; /* Margen superior */
+        }
+        
+        .video-container {
+            text-align: center; /* Centrar texto y videos */
+            background-color: #f9f9f9; /* Fondo para el contenedor de videos */
+            border: 1px solid #ddd; /* Borde alrededor del video */
+            border-radius: 8px; /* Esquinas redondeadas */
+            padding: 10px; /* Espacio interno */
+            transition: transform 0.2s; /* Efecto de transición */
+        }
+        
+        .video-container:hover {
+            transform: scale(1.05); /* Aumenta el tamaño al pasar el ratón */
+        }
+        
+        .video-container iframe {
+            width: 100%; /* Ajustar el ancho al 100% del contenedor */
+            height: 300px; /* Altura fija para todos los videos */
+            border-radius: 8px; /* Esquinas redondeadas para el iframe */
+        }
+        
+        /* Estilo para la cuadrícula de consejos */
+        .consejos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Tarjetas responsivas */
+            gap: 20px; /* Espacio entre tarjetas */
+            margin-top: 20px; /* Margen superior */
+        }
+    
+        .consejo-card {
+            background-color: #f9f9f9; /* Fondo de la tarjeta */
+            border: 1px solid #ddd; /* Borde de la tarjeta */
+            border-radius: 8px; /* Esquinas redondeadas */
+            padding: 15px; /* Espacio interno */
+            text-align: center; /* Centrar texto e imagen */
+            transition: transform 0.2s; /* Efecto de transición */
+        }
+    
+        .consejo-card:hover {
+            transform: scale(1.05); /* Aumenta el tamaño al pasar el ratón */
+        }
+    
+        .consejo-card img {
+            width: 100px; /* Ajustar el tamaño del icono */
+            height: 100px; /* Ajustar el tamaño del icono */
+            margin-bottom: 10px; /* Espacio debajo de la imagen */
+        }
+    
+        .consejo-card h3 {
+            color: #333; /* Color del título */
+        }
+    
+        .consejo-card p {
+            color: #555; /* Color del texto */
+            font-size: 0.9em; /* Tamaño de fuente más pequeño para mejor legibilidad */
+        }
+
+    </style>
+    
+</head>
+<body>
+    <section id="navegacion" class="navegacion">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/index.html" class="logo-texto">
+                    InnovaCompuTech
+                </a>
+                    
+            </div>
+            <div class="nombrelogo">
+            </div>
+            <!-- Menú principal -->
+            <ul class="menu">
+                <li><a style="font-size: 25px; font-weight: 700;" href="index.html"><i>Inicio</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="novedades.html"><i>Novedades</i></a></li>
+                <li>
+                    <a style="font-size: 25px; font-weight: 700;" href="welcometop.html"><i>Ranking</i></a>
+                </li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="armapc.html"><i>Arma tu pc</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="contacto.html"><i>Contacto</i></a></li>
+            </ul>
+            
+            <!-- Botón hamburguesa -->
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+        </nav>
+    
+        <!-- Menú desplegable en móvil -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="welcometop.html">Ranking</a></li>
+                <li><a href="armapc.html">Arma tu pc</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="content">
+        <h1 class="titulo-tucon">Tutoriales y Consejos</h1>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/Yousxxn47Ps" frameborder="0" allowfullscreen></iframe>
+            <p>suscribete a nuestro canal de youtube</p>
+        </div>
+        <section id="tutoriales">
+            <h2 class="titulo-vitu">Videos de Tutoriales</h2>
+            <div class="video-grid">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/9p3_tD7XzPg?si=u4vxrpqN75v7qxvX" frameborder="0" allowfullscreen></iframe>
+                    <p>Tutorial 1: Como optimizar tu PC. </p>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/ow4DZueTjdY?si=S77Mb4Yf6e71m_jl" frameborder="0" allowfullscreen></iframe>
+                    <p>Tutorial 2: Como optimizar tu windows .</p>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/NtjV4Eta5b8?si=YtXcRtWxO6HuN4j-" frameborder="0" allowfullscreen></iframe>
+                    <p>Tutorial 3:Mejora la velocidad de tu computadora.</p>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section id="consejos">
+            <h2 class="titulo-concetu">Consejos Útiles</h2>
+            <div class="consejos-grid">
+                <div class="consejo-card">
+                    <img src="https://i.pinimg.com/originals/6b/57/87/6b5787ff3501f9a45afdade14b9d48bd.gif" alt="Icono de compatibilidad">
+                    <h3>Compatibilidad de Componentes</h3>
+                    <p>Asegúrate de que todos los componentes de tu PC sean compatibles. Revisa las especificaciones del procesador, placa madre y memoria RAM antes de comprar.</p>
+                </div>
+                <div class="consejo-card">
+                    <img src="https://i.pinimg.com/originals/42/52/0d/42520d2f08e9b118411cb75088f2d3c7.gif" alt="Icono de limpieza">
+                    <h3>Limpieza Regular</h3>
+                    <p>Realiza limpieza periódica de tu PC para evitar el sobrecalentamiento. Usa aire comprimido para eliminar el polvo de los ventiladores y componentes internos.</p>
+                </div>
+                <div class="consejo-card">
+                    <img src="https://media.tenor.com/LP3_16MOZgMAAAAM/i-wait-and-then-error-i-do-this-error.gif" alt="Icono de mantenimiento">
+                    <h3>Mantenimiento del Software</h3>
+                    <p>Mantén tu sistema operativo y drivers actualizados para asegurar el mejor rendimiento y seguridad. Usa un software antivirus confiable para proteger tu PC.</p>
+                </div>
+                <div class="consejo-card">
+                    <img src="https://i.pinimg.com/originals/cd/83/0b/cd830b9a77ac95a80bb6ba2a8a8da6ce.gif" alt="Icono de actualización">
+                    <h3>Actualiza Tu Hardware</h3>
+                    <p>Considera actualizar componentes como RAM o almacenamiento si notas que tu PC está lento. Esto puede ser una solución más económica que comprar una nueva computadora.</p>
+                </div>
+                <div class="consejo-card">
+                    <img src="https://media.tenor.com/PpGie5juDlkAAAAM/dani-milkman.gif" alt="Icono de fuente de alimentación">
+                    <h3>Elige una Fuente de Alimentación de Calidad</h3>
+                    <p>La fuente de alimentación es crucial para la estabilidad de tu PC. Asegúrate de que sea de una marca confiable y con suficiente potencia para soportar todos tus componentes.</p>
+                </div>
+                <div class="consejo-card">
+                    <img src="https://media.tenor.com/pTQd7bfDUngAAAAM/how-to-build-a-pc.gif" alt="Icono de cableado">
+                    <h3>Organiza el Cableado</h3>
+                    <p>Un buen manejo del cableado no solo mejora la estética, sino que también ayuda en el flujo de aire y facilita el mantenimiento futuro. Usa bridas para cables para mantener todo en su lugar.</p>
+                </div>
+                <div class="consejo-card">
+                    <img src="https://media.tenor.com/5y9JU0kfzf8AAAAM/how-to-basic-how-to-basic-internet-connexion.gif" alt="Icono de ensamble">
+                    <h3>Arma Tu PC con Paciencia</h3>
+                    <p>Construir una PC puede ser complicado, pero no te apresures. Tómate tu tiempo, revisa cada paso y no dudes en buscar ayuda si te sientes atascado.</p>
+                </div>
+                <div class="consejo-card">
+                    <img src="https://media.tenor.com/ZGkP4yh0Q_0AAAAj/bugcat-bugcatsticker.gif" alt="Icono de solución de problemas">
+                    <h3>Aprende a Solucionar Problemas</h3>
+                    <p>Si algo no funciona como se espera, no te desesperes. Investiga y aprende sobre los problemas comunes de hardware y software. Esto te ayudará a manejar cualquier inconveniente.</p>
+                </div>
+            </div>
+        </section>
+        
+            
+            
+        </section>
+        
+        
+    </div>  
+    
+</body>
+<footer>
+    <a href="#" class="arriba">
+        <i class="fa-solid fa-angles-up"></i>
+    </a><section id="redes">
+        <section id="productos" class="productos">
+            <div class="products-container">
+                <table class="products-table">
+                    <tr>
+                        <th>Información</th>
+                        <th>Artículos</th>
+                        <th>Guías</th>
+                        <th>Soporte</th>
+                        <th>Nosotros</th>
+                    </tr>
+                    <tr>
+                        <td><a href="novedades.html">Novedades</a></td>
+                        <td><a href="welcometop.html">Ranking</a></td>
+                        <td><a href="armapc.html">Arma tu PC</a></td>
+                        <td><a href="formu.html">Formulario</a></td>
+                        <td><a href="contacto.html">Contacto</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"></a></td>
+                        <td><a href="graficorank.html"></a></td>
+                        <td><a href="recomendaciones.html">Tips</a></td>
+                        <td><a href="preguntas.html">FAQs</a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    <div class="redes">
+        <a href="https://www.youtube.com/@InnovaComputech"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://virtual.udabol.edu.bo/carpetaverde/general/trabajos_finales"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+</section>
+</footer>
+<script src="script1.js"></script>   
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+    
+        // Comprobar el tamaño de la pantalla al cargar la página
+        if (window.innerWidth <= 768) {
+            // Asegurarse de que el botón hamburguesa sea visible en pantallas pequeñas
+            hamburger.style.display = 'block';
+            mobileMenu.style.display = 'block';  // Mostrar el menú móvil
+        } else {
+            // En pantallas grandes, no mostrar el menú móvil ni el botón hamburguesa
+            hamburger.style.display = 'none';
+            mobileMenu.style.display = 'none';
+        }
+    
+        // Alternar la visibilidad del menú móvil al hacer clic en el botón hamburguesa
+        hamburger.addEventListener('click', function() {
+            mobileMenu.classList.toggle('open'); // Abrir o cerrar el menú
+            document.body.classList.toggle('menu-open'); // Asegurar que el contenido no se desplace
+        });
+    
+        // Actualizar el menú si el tamaño de la ventana cambia
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                hamburger.style.display = 'none';
+                mobileMenu.style.display = 'none'; // Ocultar menú en pantallas grandes
+            } else {
+                hamburger.style.display = 'block';
+                mobileMenu.style.display = 'block';  // Mostrar menú móvil en pantallas pequeñas
+            }
+        });
+    });
+    </script>
+<script>
+  let currentIndex = 0;
+const images = document.querySelectorAll('.image-slider img');
+
+function showNextImage() {
+    images[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add('active');
+}
+
+function showPrevImage() {
+    images[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    images[currentIndex].classList.add('active');
+}
+
+document.getElementById('nextBtn').addEventListener('click', showNextImage);
+document.getElementById('prevBtn').addEventListener('click', showPrevImage);
+
+images[currentIndex].classList.add('active');  // Establecer la primera imagen como activa
+
+</script>
+
+<!-- animacion de la letra de carrussel de imagenes -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".animate-on-scroll");
+
+    const scrollHandler = () => {
+        elements.forEach((el) => {
+            const rect = el.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+            if (isVisible) {
+                el.classList.add("animate");
+            }
+        });
+    };
+
+    window.addEventListener("scroll", scrollHandler);
+    scrollHandler(); // Ejecutar al cargar la página
+});
+</script>
+</html>

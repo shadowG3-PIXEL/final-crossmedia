@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Compra</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+
+    <div class="container my-5">
+        <h1 class="text-center">MENÚ</h1>
+        
+        <form id="formularioCompra">
+            <div class="form-group">
+                <label for="nombreCompleto">Nombre Completo</label>
+                <input type="text" class="form-control" id="nombreCompleto" placeholder="Ingresa tu nombre completo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" placeholder="Ingresa tu número de teléfono" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tipoPago">Tipo de Pago</label>
+                <select class="form-control" id="tipoPago" required>
+                    <option value="">Selecciona un método de pago</option>
+                    <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                    <option value="efectivo">Efectivo</option>
+                    <option value="transferencia">Transferencia Bancaria</option>
+                </select>
+            </div>
+
+            <!-- Carrito de productos -->
+            <h2>Productos en el Carrito</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="listaCarrito">
+                    <!-- Los productos se agregarán aquí dinámicamente -->
+                </tbody>
+            </table>
+
+            <!-- Total -->
+            <div class="text-right">
+                <h4>Total a Pagar: <span id="totalPagar">Bs 0.00</span></h4>
+            </div>
+
+            <a href="https://wa.me/+59160406573" class="btn btn-success" style="display: inline-flex; align-items: center; justify-content: center; padding: 10px 20px; border-radius: 8px; background-color: #2a109b; border: none; text-decoration: none;">
+                <img src="imagenes/watsat.png" style="width: 25px; height: 25px; margin-right: 10px;">
+                Comprar
+            </a>
+            
+        </form>
+    </div>
+
+    <script>
+        // Función para recuperar y mostrar los productos del carrito
+        function cargarCarrito() {
+            const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            const listaCarrito = document.getElementById('listaCarrito');
+            const totalPagar = document.getElementById('totalPagar');
+            let total = 0;
+
+            // Limpiar la tabla
+            listaCarrito.innerHTML = '';
+
+            // Iterar sobre los productos del carrito
+            carrito.forEach(producto => {
+                const subtotal = producto.precio * producto.cantidad;
+                total += subtotal;
+
+                // Crear una fila para cada producto
+                const fila = document.createElement('tr');
+                fila.innerHTML = `
+                    <td>${producto.nombre}</td>
+                    <td>${producto.cantidad}</td>
+                    <td>Bs ${producto.precio.toFixed(2)}</td>
+                    <td>Bs ${subtotal.toFixed(2)}</td>
+                `;
+                listaCarrito.appendChild(fila);
+            });
+
+            // Mostrar el total
+            totalPagar.innerText = `Bs ${total.toFixed(2)}`;
+        }
+
+        // Cargar los productos del carrito cuando la página se cargue
+        window.onload = cargarCarrito;
+
+        // Al enviar el formulario
+        document.getElementById('formularioCompra').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Compra realizada exitosamente!');
+            localStorage.removeItem('carrito'); // Limpia el carrito después de la compra
+            window.location.href = 'gracias.html'; // Redirige a una página de agradecimiento
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+

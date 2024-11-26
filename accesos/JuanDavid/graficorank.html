@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovaciones en Tecnología de PC</title>
+    <link rel="stylesheet" href="cssprinci.css"> 
+    <link rel="stylesheet" href="graficorak.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+<body>
+    
+    <section id="navegacion" class="navegacion">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731462103/2_qyazdq.png" alt="Logo de Tienda de PC">
+                </a>
+            </div>
+            <div class="nombrelogo">
+            </div>
+            <ul>
+                <li><a style="font-size: 25px; font-weight: 700;" href="index.html"><i>Inicio</i></a></li>  <!-- funcional -->
+                <li><a style="font-size: 25px; font-weight: 700;"  href="novedades.html"><i>Novedades</i></a></li>
+                <li>
+                    <a style="font-size: 25px; font-weight: 700;"  href="welcometop.html"><i>Ranking</i></a>
+                </li>
+                <li><a style="font-size: 25px; font-weight: 700;"  href="armapc.html"><i>Arma tu pc</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;"   href="contacto.html"><i>Contacto</i></a></li>
+            </ul>
+        </nav>
+    </section>
+<section>
+    <div class="content">
+        <div class="container">
+            <h1>Ranking de procesadores</h1>
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="container">
+            <h1>Ranking de Gráficas</h1>
+            <canvas id="myChart1"></canvas>
+        </div>
+        <div class="container">
+            <h1>Ranking de Laptops</h1>
+            <canvas id="myChart2"></canvas>
+        </div>
+    </div>  
+    <script src="script1.js"></script>   
+    <script>// Gráfico de PCs
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['PC Gaming Xtreme', 'PC Creator Pro', 'PC Gamer Elite'],
+                datasets: [{
+                    label: 'Puntuación de Rendimiento',
+                    data: [95, 80, 50],
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(153, 102, 255, 0.6)',
+                        'rgba(255, 159, 64, 0.6)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Puntuación'
+                        }
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Rendimiento de PCs'
+                    }
+                }
+            }
+        });
+        
+        // Gráfico de Gráficas
+        const ctx1 = document.getElementById('myChart1').getContext('2d');
+        const myChart1 = new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['NVIDIA RTX 3080', 'AMD RX 6800 XT', 'NVIDIA RTX 3070'],
+                datasets: [{
+                    label: 'Puntuación de Rendimiento',
+                    data: [10, 60, 85],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(0, 128, 0, 0.6)',
+                        'rgba(0, 255, 255, 0.6)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(0, 128, 0, 0.6)',
+                        'rgba(0, 255, 255, 0.6)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Puntuación'
+                        }
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Rendimiento de Gráficas'
+                    }
+                }
+            }
+        });
+        
+        // Gráfico de Laptops
+        const ctx2 = document.getElementById('myChart2').getContext('2d');
+        const myChart2 = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Laptop Gamer Xtreme', 'Laptop Creativa Pro', 'Laptop Oficina Elite'],
+                datasets: [{
+                    label: 'Puntuación de Rendimiento',
+                    data: [40, 88, 50],
+                    backgroundColor: [
+                        'rgba(255, 215, 0, 0.6)',
+                        'rgba(50, 205, 50, 0.6)',
+                        'rgba(255, 0, 255, 0.6)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 215, 0, 0.6)',
+                        'rgba(50, 205, 50, 0.6)',
+                        'rgba(255, 0, 255, 0.6)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Puntuación'
+                        }
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Rendimiento de Laptops'
+                    }
+                }
+            }
+        });
+    </script>   
+</section>  
+</body>
+</html>

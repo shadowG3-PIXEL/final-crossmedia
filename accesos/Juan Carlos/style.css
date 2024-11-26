@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --primary-color: #1a237e;
+    --secondary-color: #303f9f; 
+    --accent-color: #00bcd4; 
+    --text-color: #333;
+    --background-color: #CFCFCF;
+    --white: #fff;
+    --button-hover-color: #00acc1;
+    --navbar-color: #B0C4DE;
+    --navbar-text-color: #2F4F4F;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--navbar-color);
+    border-radius: 0px 0 15px 15px;
+    color: var(--navbar-text-color);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    position: fixed;
+    width: 100%;
+    height: 105px;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    font-size: 1.4rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 85px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 2.1rem;
+    color: var(--navbar-text-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.hero {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5), 
+        rgba(0,0,0,0.5)), 
+        url('https://res.cloudinary.com/dum4okaqx/image/upload/v1732220303/hero-bg_so6ksq.jpg'
+    );
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    padding: 150px 0;
+    margin-top: 80px;
+}
+
+.hero h2 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.9rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.features {
+    padding: 80px 0;
+}
+
+.features .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.feature {
+    flex-basis: calc(33.333% - 20px);
+    text-align: center;
+    padding: 20px;
+}
+.feature p {
+    font-size: 1.4rem;
+}
+
+.feature i {
+    font-size: 3.4rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    margin-bottom: 15px;
+}
+
+hr {
+    border: 0.12rem solid rgba(17, 17, 53, 0.2);
+    border-radius: 50%;
+}
+
+.about-us {
+    padding: 80px 0;
+    background-color: var(--background-color);
+}
+
+.about-us h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.about-us p {
+    font-size: 1.5rem;
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 40px 0;
+}
+
+footer p {
+    font-size: 1.2rem;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    list-style: none;
+}
+
+.social-links li {
+    margin-left: 15px;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.9rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Estilos para las páginas internas */
+.page-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.page-header h2 {
+    font-size: 3rem;
+}
+
+/* Estilos para la página de servicios */
+.services {
+    padding: 60px 0;
+}
+/* MQ para hacer 2 columnas */
+@media(min-width: 768px) {
+    .services .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+    .services .container .service-item:last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: 50%;
+    }
+}
+
+.service-item {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.service-item i {
+    font-size: 3.4rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.service-item p {
+    font-size: 1.4rem;
+}
+
+/* Estilos para el formulario de contacto */
+.contact-form .container {
+    width: 70%;
+}
+.contact-form {
+    padding: 60px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background-color: var(--button-hover-color);
+}
+
+.contact-info {
+    background-color: var(--background-color);
+    padding: 60px 0;
+}
+
+.contact-info h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.contact-info i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+/* Estilos para la página Sobre Nosotros */
+.about-content {
+    padding: 60px 0;
+}
+
+.about-content h3 {
+    color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+.about-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.about-content li {
+    margin-bottom: 10px;
+}
+
+.about-item {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about-item h3 {
+    font-size: 1.7rem;
+}
+.about-item p {
+    font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 20px;
+    }
+
+    .feature {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero h2 {
+        font-size: 2.4rem;
+    }
+
+    .hero p {
+        font-size: 1.4rem;
+    }
+}
+
+/* Estilos para el formulario de login */
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+}
+
+/* Estilos para el panel de administración */
+.admin-content {
+    padding: 40px 0;
+}
+
+.admin-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.admin-content th, .admin-content td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.admin-content th {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Estilos para los formularios de agregar */
+.add-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.success {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+/* hamburger menu */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 100;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    nav {
+        position: relative;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav ul.active {
+        display: flex;
+        background-color: var(--navbar-color);
+        color: var(--navbar-text-color);
+        border: 1px solid var(--primary-color);
+        border-radius: 5%;
+        box-shadow: 7px 7px 4px 0px rgba(0,0,0,0.45);
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+
+    /* Animación del menú hamburguesa */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .logo {
+        margin-bottom: 0;
+    }
+
+    .contact-form .container {
+        width: 100%;
+    }
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* Estilos base para la galería */
+.gallery {
+    width: 90%;
+    height: 80vh;
+    margin: 2rem auto;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Cambiado a contain para mantener la proporción */
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: 0;
+}
+
+.slider-item.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Botones de navegación */
+.navigation button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.navigation .prev {
+    left: 10px;
+}
+
+.navigation .next {
+    right: 10px;
+}
+
+.navigation button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Estilos para el video */
+
+.video .container {
+    width: 100%;
+    max-width: 900px; /* Limitamos el ancho máximo */
+    margin: 0 auto;
+    aspect-ratio: 16/9; /* Mantenemos proporción de video estándar */
+}
+
+.video video {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    /* Galería */
+    .gallery {
+        width: 100%;
+        height: 40vh;
+        margin: 0;
+        padding: 0px 15px 5px 15px;;
+    }
+
+    .slider-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .navigation button {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    /* Video */
+    .video {
+        width: 100%;
+        margin: 0;
+        padding: 5px 15px 15px 15px;
+    }
+
+    .video .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .video video {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+}

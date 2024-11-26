@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conoce a nuestros Disertantes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+/* Estilos para el contenedor de los disertantes */
+#disertantes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+/* Estilo general para cada ficha */
+.disertante {
+    background-color: #28a745; /* Cambiado a fondo verde */
+    border: 2px solid #ffd700; /* Bordes dorados */
+    border-radius: 10px;
+    width: 100%;
+    max-width: 280px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Efecto hover para las fichas */
+.disertante:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para la imagen del disertante */
+.disertante img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #ffd700; /* Añadido borde dorado a la imagen */
+}
+
+/* Estilo para el nombre del disertante */
+.disertante h3 {
+    font-size: 1.4em;
+    color: #ffd700; /* Mantenido color dorado para el nombre */
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+/* Estilo para la especialidad del disertante */
+.disertante p {
+    font-size: 1em;
+    color: #ffd700; /* Mantenido color dorado para la especialidad */
+    margin: 5px 0;
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+/* Estilo para los enlaces */
+.disertante a {
+    text-decoration: none;
+    color: #ffd700; /* Enlaces en color dorado */
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: auto;
+}
+
+.disertante a:hover {
+    color: #ffff99; /* Color dorado más claro al pasar el ratón */
+}
+
+/* Título de la sección */
+h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #ffd700; /* Título en color dorado */
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+@media screen and (max-width: 1200px) {
+    #disertantes {
+        gap: 15px;
+        padding: 15px;
+    }
+    .disertante {
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #disertantes {
+        gap: 20px;
+        padding: 10px;
+    }
+    .disertante {
+        max-width: 300px;
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #disertantes {
+        gap: 15px;
+    }
+    .disertante {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="/index.html" class="logo">SMART BUSSINES</a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="Disertantes.html" style="--i:0;">Disertantes</a>
+            <a href="acerca.html" style="--i:1;">Acerca de</a>
+            <a href="Galería.html" style="--i:2;">Galeria</a>
+            <a href="herramientas.html" style="--i:3;">Herramientas</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Conoce a nuestros Disertantes</h2>
+        <div id="disertantes">
+            <div class="disertante">
+                <img src="juanperez.jpg" alt="Juan Pérez">
+                <h3>Dorian Equicia</h3>
+                <p>Ingeniero de Sistemas</p>
+                <p>Estudiante de Ingeniería de Sistemas en la UDAbol, interesado en el desarrollo de software y la optimización de procesos tecnológicos.</p>
+            </div>
+    
+            <div class="disertante">
+                <img src="mariagomez.jpg" alt="Maria Gómez">
+                <h3>Jose Janco</h3>
+                <p>Ingeniero de Sistemas</p>
+                <p>Estudiante de Ingeniería de Sistemas en la UDAbol, con experiencia en el diseño y desarrollo de aplicaciones móviles y soluciones en la nube.</p>
+            </div>
+    
+            <div class="disertante">
+                <img src="carloslopez.jpg" alt="Carlos López">
+                <h3>Denilson Flores</h3>
+                <p>Ingeniero de Sistemas</p>
+                <p>Estudiante de Ingeniería de Sistemas en la UDAbol, apasionado por las redes de comunicación y el desarrollo de infraestructura tecnológica.</p>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>

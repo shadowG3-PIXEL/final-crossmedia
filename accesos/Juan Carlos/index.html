@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC TECH - Expertos en Reparación de Computadoras</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/63040c5298.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="/index.html"><img src="https://res.cloudinary.com/dum4okaqx/image/upload/v1732220316/LOGO2_dclip5.png" alt="PC TECH Logo"></a>
+                    <h1>PC TECH</h1>
+                </div>
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="services.html">Servicios</a></li>
+                    <li><a href="advertisements.html">Promociones</a></li>
+                    <li><a href="about.html">Nosotros</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <!-- <li><a href="admin_login.php" class="login-icon"><i class="fa-solid fa-user"></i></a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Expertos en Reparación y Mantenimiento de Computadoras</h2>
+                <p>Soluciones rápidas y confiables para mantener tu tecnología funcionando sin problemas</p>
+                <a href="contact.html" class="cta-button">Solicitar Servicio</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="feature">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <h3>Reparación Profesional</h3>
+                    <p>Técnicos certificados con años de experiencia</p>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <h3>Servicio Rápido</h3>
+                    <p>Diagnóstico y reparaciones en tiempo récord</p>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-medal"></i>
+                    <h3>Garantía de Calidad</h3>
+                    <p>Respaldamos nuestro trabajo con garantías</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="about-us">
+            <div class="container">
+                <h2>Sobre PC TECH</h2>
+                <p>En PC TECH, nos apasiona mantener tu tecnología funcionando a la perfección. Con más de una década de
+                    experiencia, nuestro equipo de expertos está preparado para enfrentar cualquier desafío técnico,
+                    desde reparaciones simples hasta las más complejas.</p>
+                <a href="about.html" class="learn-more">Conoce más sobre nosotros</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 PC TECH - Todos los derechos reservados</p>
+            <!-- <ul class="social-links">
+                <li><a href="#" class="icon-facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#" class="icon-twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" class="icon-instagram"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul> -->
+        </div>
+    </footer>
+
+    <script>
+        //menu hamburguesa
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector("nav ul");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        // Cerrar el menú cuando se hace clic en un enlace
+        document.querySelectorAll("nav ul li a").forEach((link) => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            });
+        });
+    </script>
+</body>
+
+</html>

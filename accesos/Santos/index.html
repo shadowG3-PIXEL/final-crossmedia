@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George's Food</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Conectar el archivo de estilos -->
+    <link rel="stylesheet" href="estilos.css">
+    
+</head>
+<body>
+    <!-- Video de fondo -->
+    <video class="video-background" autoplay muted loop>
+        <source src="videos/nacho.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+    <header>
+        <div class="logo-container">
+            <a href="/index.html">
+                <img src="imagenes/logo.jpg" alt="Logo de George's Food">
+            </a>
+
+            <h1 style="font-family: 'Garamond', serif; font-size: 48px; font-weight: bold; text-align: center; font-style: italic;">
+                GEORGE'S FOOD</h1>
+
+        </div>
+
+       <!-- Menú hamburguesa -->
+    <nav>
+        <input type="checkbox" id="menu-toggle" style="display: none;">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <div class="menu">
+            <a href="index.html" class="btn" aria-label="Inicio"><i class="fas fa-home"></i> Inicio</a>
+            <a href="#menu-section" class="btn" aria-label="Menú"><i class="fas fa-utensils"></i> Menú</a>
+            <a href="#promociones" class="btn" aria-label="Promociones"><i class="fas fa-bullhorn"></i> Promociones</a>
+            <a href="servicio.html" class="btn" aria-label="Servicios"><i class="fas fa-concierge-bell"></i> Servicios</a>
+            <a href="contacto.html" class="btn" aria-label="Contacto"><i class="fas fa-phone"></i> Contacto</a>
+        </div>
+    </nav>
+    </header>
+
+    <section class="section about-section">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 style="font-family: 'Arial', sans-serif; font-weight: bold; color: #124579; text-shadow: 2px 2px 5px rgba(0,0,0,0.3); text-align: center;">
+                    SOBRE NOSOTROS
+                </h2>
+   <!-- Botón para mostrar el video -->
+<div style="text-align: center; margin-top: 20px;">
+    <button id="showVideoBtn" style="padding: 10px 20px; font-size: 16px;">ABRIR VIDEO</button>
+</div>
+
+<!-- Video oculto inicialmente -->
+<div id="videoContainer" style="text-align: center; margin-top: 20px; display: none;">
+    <video id="video" width="400" controls>
+        <source src="videos/GEORGES.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+    <!-- Botón para volver al botón "Ver Video" -->
+    <br>
+    <button id="hideVideoBtn" style="margin-top: 10px; padding: 10px 20px; font-size: 16px;">CERRAR VIDEO</button>
+</div>
+
+<script>
+    // Obtener referencia a los elementos del DOM
+    const showVideoBtn = document.getElementById('showVideoBtn');
+    const hideVideoBtn = document.getElementById('hideVideoBtn');
+    const videoContainer = document.getElementById('videoContainer');
+    const video = document.getElementById('video');
+
+    // Evento para mostrar el video al hacer clic en el botón "Ver Video"
+    showVideoBtn.addEventListener('click', function() {
+        videoContainer.style.display = 'block'; // Mostrar el video y el botón "Volver"
+        showVideoBtn.style.display = 'none'; // Ocultar el botón "Ver Video"
+    });
+
+    // Evento para ocultar el video y volver a mostrar el botón "Ver Video"
+    hideVideoBtn.addEventListener('click', function() {
+        videoContainer.style.display = 'none'; // Ocultar el video y el botón "Volver"
+        showVideoBtn.style.display = 'inline-block'; // Mostrar el botón "Ver Video"
+        video.pause(); // Pausar el video si está en reproducción
+        video.currentTime = 0; // Reiniciar el video al principio
+    });
+</script>
+
+
+                
+                
+                <p>Ofrecemos una variedad de comida rápida deliciosa y de alta calidad. Nuestro objetivo es brindar a nuestros clientes una experiencia gastronómica única y satisfactoria.</p>
+
+                <p>George's Food es una empresa dedicada a ofrecer los mejores platillos de comida rápida. Nos enorgullece utilizar ingredientes frescos y de alta calidad para preparar nuestras comidas. ¡Gracias por visitarnos!</p>
+                
+            </div>
+            <div class="col-md-6">
+                <div id="foodCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://t3.ftcdn.net/jpg/08/89/43/26/360_F_889432606_cB5RhEh7xq0bZu3rwTeZ5aa1LeA8cJF1.jpg" class="d-block w-100" alt="Hamburguesa" style="height: 400px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg" class="d-block w-100" alt="Pizza" style="height: 400px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://www.paulinacocina.net/wp-content/uploads/2024/01/pollo-a-la-broaster-Paulina-Cocina-Recetas-1722251878.jpg" class="d-block w-100" alt="Pollo" style="height: 400px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" class="d-block w-100" alt="Nachos" style="height: 400px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://wallpapers.com/images/hd/coca-cola-qu1tmq08h53fydzq.jpg" class="d-block w-100" alt="Gaseosa" style="height: 400px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://strapi.fitia.app/uploads/fruta_entera_o_jugo_e3201ad519.jpg" class="d-block w-100" alt="Jugo" style="height: 400px; object-fit: cover;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#foodCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#foodCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+
+                    
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+                          <!-- Sección Menú de Productos -->
+                         
+    
+<section id="menu-section" class="menu-section">
+    <!-- Video de fondo -->
+    <video autoplay muted loop id="background-video">
+        <source src="videos/rusa.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+    </video>
+    
+    <div class="container position-relative">
+        <h1 class="text-center my-4 text-white">MENÚ</h1>
+    
+        <div class="row">
+            <!-- Producto 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="imagenes/ham.avif" class="card-img-top img-fluid" alt="Hamburguesa Clásica" style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Hamburguesa Clásica</h5>
+                        <p class="card-text">Deliciosa hamburguesa con carne, queso, lechuga y tomate.</p>
+                        <p class="card-text"><strong>Precio: Bs 29.99</strong></p>
+                        <input type="number" class="form-control mb-2" placeholder="Cantidad" min="0" value="0">
+                        <button type="button" class="btn btn-primary btn-block" onclick="agregarAlCarrito(this)">
+                            <i class="fas fa-shopping-cart "></i> Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Producto 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="imagenes/pizza.avif" class="card-img-top img-fluid" alt="Pizza Pepperoni" style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Pizza Pepperoni</h5>
+                        <p class="card-text">Pizza con salsa de tomate, mozzarella y pepperoni.</p>
+                        <p class="card-text"><strong>Precio: Bs 49.99</strong></p>
+                        <input type="number" class="form-control mb-2" placeholder="Cantidad" min="0" value="0">
+                        <button type="button" class="btn btn-primary btn-block" onclick="agregarAlCarrito(this)">
+                            <i class="fas fa-shopping-cart"></i> Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Producto 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="imagenes/ensalada.png" class="card-img-top img-fluid" alt="Ensalada César" style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Ensalada César</h5>
+                        <p class="card-text">Ensalada fresca con lechuga, crutones y aderezo César.</p>
+                        <p class="card-text"><strong>Precio: Bs 25.50</strong></p>
+                        <input type="number" class="form-control mb-2" placeholder="Cantidad" min="0" value="0">
+                        <button type="button" class="btn btn-primary btn-block" onclick="agregarAlCarrito(this)">
+                            <i class="fas fa-shopping-cart"></i> Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Producto 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="imagenes/spollo.jpg" class="card-img-top img-fluid" alt="Sándwich de Pollo" style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Sándwich de Pollo</h5>
+                        <p class="card-text">Sándwich con pollo a la parrilla, lechuga y tomate.</p>
+                        <p class="card-text"><strong>Precio: Bs 14.99</strong></p>
+                        <input type="number" class="form-control mb-2" placeholder="Cantidad" min="0" value="0">
+                        <button type="button" class="btn btn-primary btn-block" onclick="agregarAlCarrito(this)">
+                            <i class="fas fa-shopping-cart"></i> Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Producto 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="imagenes/nachos.jpg" class="card-img-top img-fluid" alt="Nachos con Queso" style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Nachos con Queso</h5>
+                        <p class="card-text">Nachos crujientes servidos con queso derretido.</p>
+                        <p class="card-text"><strong>Precio: Bs 25.50</strong></p>
+                        <input type="number" class="form-control mb-2" placeholder="Cantidad" min="0" value="0">
+                        <button type="button" class="btn btn-primary btn-block" onclick="agregarAlCarrito(this)">
+                            <i class="fas fa-shopping-cart"></i> Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Producto 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="imagenes/vatido.avif" class="card-img-top img-fluid" alt="Batido de Fresa" style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Batido de Fresa</h5>
+                        <p class="card-text">Batido cremoso de fresa fresca.</p>
+                        <p class="card-text"><strong>Precio: Bs 9.99</strong></p>
+                        <input type="number" class="form-control mb-2" placeholder="Cantidad" min="0" value="0">
+                        <button type="button" class="btn btn-primary mt-auto" onclick="agregarAlCarrito(this)">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+       <!-- Botón Comprar --> 
+<div class="text-center my-4">
+    <button type="button" class="btn btn-success mx-2 btn-lg" onclick="comprar()">
+        <i class="fas fa-shopping-cart"></i> Comprar
+    </button>
+</div>
+
+<!-- Modal para formulario_menu.html -->
+<div class="modal fade" id="modalFormulario" tabindex="-1" aria-labelledby="modalFormularioLabel" aria-hidden="true"data-bs-backdrop="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalFormularioLabel">Formulario de Compra</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Aquí puedes incluir el formulario desde formulario_menu.html -->
+                <iframe src="formulario_menu.html" width="100%" height="400px" frameborder="0"></iframe>
+                <button type="button" class="btn btn-secondary mt-3" data-bs-dismiss="modal" aria-label="Close">Cerrar</button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<!-- CSS de Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- JavaScript de Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+<script>
+   // Función para agregar productos al carrito
+function agregarAlCarrito(button) {
+    // Obtiene la cantidad actual del campo de entrada
+    const inputCantidad = button.previousElementSibling; // El input de cantidad es el anterior al botón
+    const cantidadActual = parseInt(inputCantidad.value);
+    
+    // Aumenta la cantidad en 1
+    inputCantidad.value = cantidadActual + 1;
+
+    // Cambia el texto y el estilo del botón
+    button.classList.add("btn-success");
+    button.innerText = "Añadido";
+
+    // Obtiene los datos del producto (esto depende de cómo estés mostrando los productos en tu HTML)
+    const nombreProducto = button.getAttribute('data-nombre');  // Por ejemplo, si tienes un data-nombre en el botón
+    const precioProducto = parseFloat(button.getAttribute('data-precio')); // Supón que tienes el precio en un atributo data-precio
+
+    // Crear objeto producto
+    const producto = {
+        nombre: nombreProducto,
+        precio: precioProducto,
+        cantidad: cantidadActual
+    };
+
+    // Guardar el producto en el localStorage
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];  // Obtiene el carrito actual o crea uno vacío si no existe
+
+    // Buscar si el producto ya está en el carrito
+    const index = carrito.findIndex(item => item.nombre === nombreProducto);
+    if (index !== -1) {
+        // Si ya existe, actualiza la cantidad
+        carrito[index].cantidad = carrito[index].cantidad + 1;
+    } else {
+        // Si no existe, añade el producto al carrito
+        carrito.push(producto);
+    }
+
+    // Guarda el carrito actualizado en el localStorage
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+// Función para abrir el formulario de compra y mostrar el modal
+function comprar() {
+    // Activar el modal manualmente si necesitas hacer algo adicional antes de abrirlo
+    var myModal = new bootstrap.Modal(document.getElementById('modalFormulario'));
+    myModal.show();
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- Sección de Promociones Especiales  -->
+
+
+<div id="promociones" class="container-fluid p-0 position-relative">
+    <!-- Video de fondo -->
+    <video autoplay muted loop id="video-fondo">
+        <source src="videos/fresa.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+    </video>
+    <div class="container position-relative z-index-1">
+        <h1 class="text-center my-4 text-white">PROMOCIONES ESPECIALES</h1>
+        <div class="row">
+            <!-- Promoción 1 -->
+            <div class="col-md-4 mb-4 d-flex">
+                <div class="card w-100 d-flex">
+                    <img src="imagenes/promo1.webp" class="card-img-top" alt="Combo Familiar">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Combo Familiar</h5>
+                        <p class="card-text">Incluye 2 pizzas grandes, 4 bebidas y un postre. ¡Perfecto para compartir!</p>
+                        <p class="card-text"><del>Bs 200.00</del> <strong>Bs 180.00</strong></p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary" onclick="agregarProducto('Combo Familiar', 24.99)">Añadir</button>
+                            <button class="btn btn-danger" onclick="quitarProducto('Combo Familiar', 24.99)">Quitar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Promoción 2 -->
+            <div class="col-md-4 mb-4 d-flex">
+                <div class="card w-100 d-flex">
+                    <img src="imagenes/promo2.jpg" class="card-img-top" alt="Almuerzo Express">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Almuerzo Express</h5>
+                        <p class="card-text">Sándwich de pollo, papas fritas y bebida por un precio especial.</p>
+                        <p class="card-text"><del>Bs 40.00</del> <strong>Bs 35.00</strong></p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary" onclick="agregarProducto('Almuerzo Express', 7.99)">Añadir</button>
+                            <button class="btn btn-danger" onclick="quitarProducto('Almuerzo Express', 7.99)">Quitar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Promoción 3 -->
+            <div class="col-md-4 mb-4 d-flex">
+                <div class="card w-100 d-flex">
+                    <img src="imagenes/promo3.webp" class="card-img-top" alt="2x1 en Batidos">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">2x1 en Batidos</h5>
+                        <p class="card-text">Disfruta de dos batidos por el precio de uno. ¡Elige entre fresa, chocolate o vainilla!</p>
+                        <p class="card-text"><strong>Bs 15</strong></p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary" onclick="agregarProducto('2x1 en Batidos', 4.99)">Añadir</button>
+                            <button class="btn btn-danger" onclick="quitarProducto('2x1 en Batidos', 4.99)">Quitar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resumen de productos seleccionados -->
+        <div class="mt-5">
+            <h3>Productos seleccionados</h3>
+            <ul id="lista-productos" class="list-group mb-3"></ul>
+            <h4>Total: Bs <span id="total-precio">0.00</span></h4>
+        </div>
+
+ <!-- Botón para abrir el modal de promociones -->
+ <div class="text-center mt-4">
+    <button type="button" class="btn btn-success btn-lg" onclick="mostrarModal()">Aprovechar Promociones</button>
+</div>
+</div>
+</div>
+
+<!-- Modal para el formulario de promociones -->
+<div id="modalPromociones" class="modal fade" tabindex="-1" aria-labelledby="modalPromocionesLabel" aria-hidden="true"data-bs-backdrop="false">
+<div class="modal-dialog">
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="modalPromocionesLabel">Formulario de Promociones</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <!-- Incluir el contenido del formulario de promociones aquí -->
+        <iframe src="formulario_promociones.html" width="100%" height="400px" frameborder="0"></iframe>
+        <div class="modal-footer">
+            <!-- Botón para cerrar el modal -->
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+    </div>
+    
+</div>
+</div>
+</div>
+
+<script>
+let productosSeleccionados = [];
+let totalPrecio = 0;
+
+// Función para agregar productos
+function agregarProducto(nombre, precio) {
+productosSeleccionados.push({ nombre: nombre, precio: precio });
+totalPrecio += precio;
+actualizarListaProductos();
+}
+
+// Función para quitar productos
+function quitarProducto(nombre, precio) {
+const index = productosSeleccionados.findIndex(producto => producto.nombre === nombre);
+if (index !== -1) {
+    productosSeleccionados.splice(index, 1);
+    totalPrecio -= precio;
+    actualizarListaProductos();
+}
+}
+
+// Función para actualizar la lista de productos y el precio total
+function actualizarListaProductos() {
+const listaProductos = document.getElementById('lista-productos');
+listaProductos.innerHTML = ''; // Limpiar la lista
+
+productosSeleccionados.forEach(producto => {
+    const li = document.createElement('li');
+    li.classList.add('list-group-item');
+    li.textContent = `${producto.nombre} - Bs ${producto.precio.toFixed(2)}`;
+    listaProductos.appendChild(li);
+});
+
+document.getElementById('total-precio').textContent = totalPrecio.toFixed(2);
+}
+
+// Función para abrir el modal
+function mostrarModal() {
+    // Guarda los productos y el precio total en el localStorage
+    localStorage.setItem('productosSeleccionados', JSON.stringify(productosSeleccionados));
+    localStorage.setItem('totalPrecio', totalPrecio);
+
+    // Abre el modal
+    const modal = new bootstrap.Modal(document.getElementById('modalPromociones'));
+    modal.show();
+}
+
+</script>
+
+
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap 5 JS y Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

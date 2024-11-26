@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glaciar Dulce</title>
+    <!-- Favicon Personalizado -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Preloader Animado -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo" id="logo" >
+            <!-- Reemplaza esto con tu logo real -->
+            <h1><a href="/index.html">Glaciar Dulce</a></h1>
+        </div>
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos-mas-vendidos">Más Vendidos</a></li>
+                <li><a href="index.html#galeria">Galeria</a></li>
+                <li><a href="all-products.html">Todos los Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                
+            </ul>
+            <!-- Menú Hamburguesa para pantallas pequeñas -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h2>¡Bienvenidos a Glaciar Dulce!</h2>
+            <p>En Heladería Glaciar Dulce, nos apasiona crear los helados más deliciosos y refrescantes para todos nuestros clientes. Con ingredientes de la más alta calidad y una dedicación inigualable, cada sabor es una experiencia única.</p>
+
+            <button id="explorar-btn">Explorar ahora</button>
+        </div>
+        <div class="hero-image">
+            <img src="LOGO1.jpg" alt="Helados Deliciosos" width="20">
+        </div>
+    </section>
+
+    <!-- Sección de Productos Más Vendidos -->
+    <section class="productos-mas-vendidos" id="productos-mas-vendidos">
+        <h2>Productos Más Vendidos</h2>
+        <div class="grid-container">
+            <!-- Tarjeta de Producto Más Vendido 1 -->
+            <div class="card">
+                <img src="menta1.jpeg" alt="Helado de Menta">
+                <h3>Helado de Menta</h3>
+                <p>Refrescante y aromático, una delicia en cada bocado.</p>
+                <button class="compra-btn">Realizar Pedido</button>
+            </div>
+            <!-- Tarjeta de Producto Más Vendido 2 -->
+            <div class="card">
+                <img src="dulce de leche.jpg" alt="Helado de Dulce de Leche">
+                <h3>Helado de Dulce de Leche</h3>
+                <p>Suave y cremoso, con el sabor único del dulce de leche.</p>
+                <button class="compra-btn">Realizar Pedido</button>
+            </div>
+            <!-- Tarjeta de Producto Más Vendido 3 -->
+            <div class="card">
+                <img src="mango.jpeg" alt="Helado de Mango">
+                <h3>Helado de Mango</h3>
+                <p>Exótico y jugoso, perfecto para los días calurosos.</p>
+                <button class="compra-btn">Realizar Pedido</button>
+            </div>
+            <!-- Puedes agregar más tarjetas según sea necesario -->
+        </div>
+    </section>
+
+    <!-- Carrusel de Contenido Multimedia -->
+    <section class="carrusel" id="galeria">
+        <h2>Galería</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn left" id="prevBtn">&#10094;</button>
+            <div class="carousel-slide">
+                <div class="carousel-item">
+                    <img src="galeria1.jpg" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="galeria2.jpg" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="galeria3.jpg" alt="Imagen 3">
+                </div>
+            </div>
+            <button class="carousel-btn right" id="nextBtn">&#10095;</button>
+        </div>
+    </section>
+    
+     
+        <!-- Indicadores -->
+        <div class="carousel-indicators" id="carousel-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+            <!-- Agrega más indicadores según los slides -->
+        </div>
+    </section>
+
+    <!-- Sección de Contacto para Promociones -->
+    <section class="contacto" id="contacto">
+        <h2>Contacto</h2>
+        <div class="contact-container">
+            <form id="contact-form">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefono">Teléfono (opcional)</label>
+                <input type="tel" id="telefono" name="telefono">
+
+                <button type="submit">Inscribirse a Promociones</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Volver al inicio">&#8679;</button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-media">
+            <a href="#" aria-label="Facebook">
+                <a href="https://www.facebook.com/profile.php?id=61568802465574" target="_blank" aria-label="Facebook">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="32" height="32">
+                </a>
+                
+                              
+            </a>
+            <a href="https://www.instagram.com/alejandrasandy28?igsh=ZTYyZWM4a2t6Ynk2" aria-label="Instagram">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+            </a>
+            <a href="https://youtu.be/PcB3zawTtKk" target="_blank" aria-label="YouTube">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733646.png" alt="YouTube" width="32" height="32">            
+                <a href="https://wa.me/59174118712?text=¡Hola!%20Gracias%20por%20contactarnos%20😊%20Glaciar%20Dulce,%20especializados%20en%20los%20mejores%20helados%20artesanales.%20¿En%20qué%20podemos%20ayudarte%20hoy?" target="_blank" aria-label="WhatsApp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="32" height="32">
+                </a>
+                
+            
+        </div>
+        <div class="footer-about-us">
+            <h3>Sobre Nosotros</h3>
+            
+        </div>
+        <div class="footer-contact-info">
+            <p><strong>Email:</strong> contacto@heladeriaglaciar dulce.com</p>
+                <strong>Teléfono:</strong> 
+                <a href="https://wa.me/59174118712?text=¡Hola!%20Gracias%20por%20contactarnos%20😊%20Glaciar%20Dulce,%20especializados%20en%20los%20mejores%20helados%20artesanales.%20¿En%20qué%20podemos%20ayudarte%20hoy?" target="_blank">
+                    +591 74118712
+                </a>
+                
+            <p><strong>Dirección:</strong> 6 de Octubre y Aroma</p>
+        </div>
+        <p>&copy; 2024 Heladeria Glaciar Dulce. Todos los derechos reservados Jorge Aldrin Magne Soto - Alejandra G. Sandy Laura - Pablo L. Rojas Loma.</p>
+    </footer>
+
+     <!-- Modal para Pedido -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <p>¡Gracias por tu interés!</p>
+        <a href="https://wa.me/59174118712?text=¡Hola!%20Quisiera%20hacer%20un%20pedido%20de%20helado.%20¿Está%20disponible?" class="cart-button" target="_blank">
+            Hacer Pedido por WhatsApp
+        </a>
+    </div>
+</div>
+
+    <!-- Scripts JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

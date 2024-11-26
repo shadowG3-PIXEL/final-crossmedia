@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC TECH - Sobre Nosotros</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/63040c5298.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="/index.html"><img src="https://res.cloudinary.com/dum4okaqx/image/upload/v1732220316/LOGO2_dclip5.png" alt="PC TECH Logo"></a>
+                    <h1>PC TECH</h1>
+                </div>
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="services.html">Servicios</a></li>
+                    <li><a href="advertisements.html">Promociones</a></li>
+                    <li><a href="about.html">Nosotros</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <!-- <li><a href="admin_login.php" class="login-icon"><i class="fa-solid fa-user"></i></a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>Sobre Nosotros</h2>
+            </div>
+        </section>
+
+        <section class="about-content">
+            <div class="container">
+                <div class="about-item">
+                    <h3>Nuestra Historia</h3>
+                    <p>PC TECH nació en 2010 con la visión de proporcionar servicios de reparación de computadoras de
+                        alta calidad y accesibles para todos. Desde entonces, hemos crecido para convertirnos en un
+                        referente en nuestra comunidad, manteniendo siempre nuestro compromiso con la excelencia y la
+                        satisfacción del cliente.</p>
+                </div>
+
+                <div class="about-item">
+                    <h3>Nuestra Misión</h3>
+                    <p>En PC TECH, nos dedicamos a mantener la tecnología de nuestros clientes funcionando sin
+                        problemas. Nos esforzamos por ofrecer soluciones rápidas, eficientes y asequibles para todas sus
+                        necesidades informáticas, respaldadas por un servicio al cliente excepcional.</p>
+                </div>
+
+                <div class="about-item">
+                    <h3>Nuestro Equipo</h3>
+                    <p>Contamos con un equipo de técnicos altamente capacitados y apasionados por la tecnología. Cada
+                        miembro de nuestro equipo se mantiene actualizado con las últimas tendencias y avances en el
+                        campo de la informática para garantizar que nuestros clientes reciban el mejor servicio posible.
+                    </p>
+                </div>
+
+                <div class="about-item">
+                    <h3>Nuestros Valores</h3>
+                    <p>Integridad: Siempre somos honestos y transparentes en nuestro trabajo.</p>
+                    <p>Excelencia: Nos esforzamos por superar las expectativas en cada tarea que realizamos.</p>
+                    <p>Innovación: Constantemente buscamos nuevas formas de mejorar nuestros servicios.</p>
+                    <p>Compromiso con el cliente: La satisfacción del cliente es nuestra prioridad número uno.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 PC TECH - Todos los derechos reservados</p>
+            <!-- <ul class="social-links">
+                <li><a href="#" class="icon-facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#" class="icon-twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" class="icon-instagram"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul> -->
+        </div>
+    </footer>
+
+    <script>
+        //menu hamburguesa
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector("nav ul");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        // Cerrar el menú cuando se hace clic en un enlace
+        document.querySelectorAll("nav ul li a").forEach((link) => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            });
+        });
+    </script>
+</body>
+
+</html>

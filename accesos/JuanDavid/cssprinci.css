@@ -1,0 +1,1385 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo base del cuerpo */
+body {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 25px; /* Tamaño base */
+    background: linear-gradient(to top, rgba(23, 42, 58, 0.8), rgba(34, 53, 77, 1)), 
+    url(https://res.cloudinary.com/dx80kll1o/image/upload/v1732074595/gaming2_eqpzgk.jpg);
+    color: #2c3e50; /* Color de texto oscuro */
+    background-size: cover; /* Hace que la imagen cubra toda el área */
+    background-repeat: no-repeat; /* Previene que la imagen se repita */
+    background-position: center center; /* Alinea la imagen al centro */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1024px) {
+    body {
+        font-size: 22px; /* Reducir el tamaño de fuente en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 20px; /* Reducir más el tamaño de fuente en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 18px; /* Tamaño más pequeño para dispositivos móviles */
+    }
+}
+
+/* Estilo del logo de texto */
+/* Estilo del logo de texto */
+.logo-texto {
+    font-family: 'Poppins', sans-serif; /* Fuente redondeada */
+    font-size: 25px; /* Ajusta el tamaño del texto */
+    font-weight: bolder; /* Aumenta el grosor del texto */
+    color: #ffffff; /* Color del texto */
+    background: linear-gradient(to left, #ff0800, #9500ff); /* Degradado de colores */
+    -webkit-background-clip: text; /* Esto hace que el fondo se aplique solo al texto */
+    background-clip: text;
+    text-decoration: none; /* Elimina el subrayado del texto */
+    padding: 10px 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Transición suave para el cambio */
+    
+    /* Borde con animación de colores */
+    border: 4px solid;
+    border-image: linear-gradient(to right, red, yellow, green, cyan, blue, magenta);
+    border-image-slice: 1;
+    animation: borderAnimation 5s ease-in-out infinite; /* Transición más suave con ease-in-out */
+    
+    /* Subrayado */
+    text-decoration: underline; /* Agrega el subrayado */
+    text-underline-offset: 8px; /* Ajusta la distancia entre el texto y el subrayado */
+    text-decoration-thickness: 3px; /* Aumenta el grosor del subrayado */
+}
+
+/* Efecto al pasar el mouse */
+.logo-texto:hover {
+    color: #ffffff;
+    transform: scale(1.15); /* Aumenta el tamaño del texto */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Efecto de resplandor */
+}
+
+/* Animación para mover el borde de colores */
+@keyframes borderAnimation {
+    0% {
+        border-image-source: linear-gradient(to right, red, yellow, green, cyan, blue, magenta); /* Estado inicial */
+    }
+    40% {
+        border-image-source: linear-gradient(to right, red, yellow, green, cyan, blue, magenta); /* Suavizar transición */
+    }
+    50% {
+        border-image-source: linear-gradient(to right, magenta, blue, cyan, green, yellow, red); /* Cambio intermedio */
+    }
+    60% {
+        border-image-source: linear-gradient(to right, magenta, blue, cyan, green, yellow, red); /* Mantener el cambio */
+    }
+    100% {
+        border-image-source: linear-gradient(to right, red, yellow, green, cyan, blue, magenta); /* Regreso al estado inicial */
+    }
+}
+
+
+/* Estilos para la barra de navegación */
+.navegacion .navbar {
+    background: linear-gradient(to left, #ff0800, #9500ff);
+    color: #3d3838;
+    position: fixed;
+    font-size: 25px;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Aseguramos que el navbar esté encima del contenido */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    height: 70px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.navegacion .navbar .logo img {
+    margin-top: 10px;
+    height: 60px; /* Reducir el tamaño del logo */
+    transition: transform 0.8s ease;
+}
+
+.navegacion .navbar .logo img:hover {
+    transform: scale(1.1);
+}
+
+.navegacion .navbar ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.navegacion .navbar ul li {
+    position: relative;
+    margin-left: 20px;
+}
+
+.navegacion .navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background: linear-gradient(to left, #801e1b, #410b61);
+    transform: translateY(-3px);
+}
+
+/* Estilos para el botón hamburguesa */
+.hamburger {
+    background: linear-gradient(to left, #a28813e9, #9628e5); /* Degradado de colores (rojo a morado) */
+    border: none;
+    color: white;
+    font-size: 30px; /* Reducir el tamaño de la fuente */
+    cursor: pointer;
+    display: none; /* Por defecto, no visible */
+    position: absolute;
+    top: 50%; /* Centrar verticalmente */
+    right: -5px; /* Ajustar la posición a la derecha */
+    transform: translateY(-50%); /* Asegura que se centre verticalmente */
+    padding: 8px 18px; /* Reducir solo el espaciado vertical */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra más sutil */
+}
+
+
+
+/* Efecto cuando se presiona el botón hamburguesa */
+/* Efecto cuando se presiona el botón hamburguesa */
+.hamburger:active {
+    background: linear-gradient(to right, #9500ff,#ff0800); /* Degradado al presionar */
+}
+
+/* Menú móvil */
+.mobile-menu {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Menú fijo en la parte superior */
+    top: 70px; /* Para que se posicione debajo del navbar */
+    left: 0;
+    background: linear-gradient(to right, #9500ff,#ff0800); /* Degradado de colores */
+    width: 100%;
+    padding: 10px;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out; /* Animación para deslizar el menú */
+    transform: translateY(-100%); /* Menú oculto fuera de la pantalla */
+}
+
+.mobile-menu.open {
+    transform: translateY(0); /* Menú visible (desliza hacia abajo) */
+}
+
+.mobile-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.mobile-menu ul li {
+    margin: 15px 0;
+}
+
+.mobile-menu ul li a {
+    color: #fff;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: 700;
+    background: linear-gradient(to left, #ff0800, #9500ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu ul li a:hover {
+    color: white;
+    background: linear-gradient(to left, #801e1b, #410b61);
+    transform: translateY(-3px);
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Reducir tamaño del logo de texto en dispositivos móviles */
+    .logo-texto {
+        font-size: 18px; /* Reducir más el tamaño de texto en móviles */
+    }
+    .navegacion .navbar ul {
+        display: none; /* Ocultar el menú principal */
+    }
+
+    .hamburger {
+        font-size: 40px; /* Aumentar el tamaño de la fuente en móviles */
+        display: block; /* Mostrar el botón en móviles */
+    }
+
+    /* Menú móvil inicialmente oculto */
+    .mobile-menu {
+        display: block;
+    }
+
+    /* Centrar las opciones del menú móvil */
+    .mobile-menu ul {
+        text-align: center;
+    }
+    
+}
+
+/* Ajustes para cuando el menú está abierto */
+.open .hamburger {
+    transform: rotate(90deg); /* Rotación del botón hamburguesa */
+}
+
+/* Para garantizar que el contenido no se mueva cuando el menú se despliega */
+body.menu-open .content {
+    transform: translateY(250px); /* Asegurar que el contenido no se desplace */
+}
+/* COmments - COMENTARIOS DE LA GENTE */
+.coments {
+    background: linear-gradient(to right, #da3b2d, #7710c1);
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.coments .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.coments h2 {
+    font-size: 48px;
+    font-family: 'Arial', sans-serif;
+    text-align: center; /* Centrar el título */
+    padding: 20px 0;
+}
+
+.coments .fila {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten automáticamente */
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px; /* Espacio entre columnas en pantallas pequeñas */
+}
+
+.coments .fila .col {
+    width: 49%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.coments .fila .col h3 {
+    font-size: 28px;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 25px;
+}
+
+.coments .fila .izquierda {
+    border-right: 2px solid #a200ff;
+}
+
+.coments .fila .derecha {
+    border-left: 2px solid #a200ff;
+}
+
+.coments .fila .item {
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: rgb(71, 37, 165);
+    position: relative;
+    border-radius: 30px;
+}
+
+.coments .fila .item h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.coments .fila .item .casa {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+
+.coments .fila .item .fecha {
+    display: block;
+    color: #fafafa;
+    margin-bottom: 10px;
+}
+
+.coments .fila .item p {
+    line-height: 24px;
+}
+
+/* Media Query para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    .coments h2 {
+        font-size: 36px; /* Reducir el tamaño del título */
+    }
+
+    .coments .fila .col {
+        width: 100%; /* Cambiar a una sola columna */
+        padding: 10px; /* Reducir padding */
+    }
+
+    .coments .fila {
+        gap: 10px; /* Reducir el espacio entre columnas */
+    }
+
+    .coments .fila .izquierda, 
+    .coments .fila .derecha {
+        border: none; /* Quitar bordes para simplificar en pantallas pequeñas */
+    }
+
+    .coments .fila .item {
+        padding: 20px; /* Reducir padding de los items */
+    }
+
+    .coments .fila .item h4 {
+        font-size: 18px; /* Reducir el tamaño de los subtítulos */
+    }
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .coments h2 {
+        font-size: 28px; /* Ajustar título para móviles */
+    }
+
+    .coments {
+        padding: 20px 10px; /* Reducir padding general */
+    }
+
+    .coments .fila {
+        gap: 10px; /* Espacio reducido entre elementos */
+    }
+
+    .coments .fila .item {
+        padding: 15px; /* Reducir padding en items */
+        font-size: 16px; /* Ajustar tamaño de texto en los items */
+    }
+}
+
+
+/*carrusel*/
+.carrusel {
+    background: url("https://res.cloudinary.com/dx80kll1o/image/upload/v1732074416/fon_nwuniv.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+}
+.carrusel h2 {
+    font-size: 5rem; /* Tamaño predeterminado para pantallas grandes */
+    font-family: 'Chakra Petch', sans-serif;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    display: inline-block;
+    border-radius: 8px;
+    opacity: 0; /* Oculto inicialmente */
+    transform: translateY(50px); /* Desplazado hacia abajo inicialmente */
+    transition: all 1s ease-out;
+}
+
+.carrusel h2.animate {
+    opacity: 1; /* Visible */
+    transform: translateY(0); /* Vuelve a su posición */
+}
+
+
+/* Ajustes para móviles */
+@media (max-width: 480px) {
+    .carrusel h2 {
+        font-size: 3.5rem; /* Texto aún más pequeño */
+        padding: 6px; /* Más compacto */
+    }
+}
+
+/* Estilo base para empinfo */
+.empinfo {
+    background: linear-gradient(to top, rgba(23, 42, 58, 0.8), rgba(34, 53, 77, 1)), 
+    url("https://res.cloudinary.com/dx80kll1o/image/upload/v1732074595/gaming2_eqpzgk.jpg");
+    background-size: cover;
+    font-family: 'Chakra Petch', sans-serif;
+    padding: 100px 250px; /* Espaciado grande */
+    box-sizing: border-box;
+    color: #ffffff; /* Texto blanco para mayor contraste */
+}   
+
+/* Estilo para el título */
+.empinfo .company-info h2 {
+    color: #df2929; /* Color del título */
+    font-size: 3.5em; /* Tamaño grande */
+    text-align: center; /* Alinear título al centro */
+}
+
+/* Estilo para el texto */
+.empinfo .company-info p {
+    color: #d4ced7; /* Color del texto */
+    font-family: "arial", serif;
+    margin-bottom: 40px;
+    font-size: 1.6em; /* Tamaño de fuente más grande */
+    text-align: center; /* Alinear texto al centro */
+}
+@media (max-width: 768px) {
+    .empinfo {
+        padding: 60px 50px; /* Reducir el espaciado para dispositivos más pequeños */
+    }
+
+    .empinfo .company-info h2 {
+        font-size: 2.5em; /* Reducir tamaño de título */
+    }
+
+    .empinfo .company-info p {
+        font-size: 1.2em; /* Reducir tamaño del texto */
+    }
+
+    .video-container iframe {
+        width: 100%; /* Hacer que el video ocupe el 100% del contenedor */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .empinfo {
+        padding: 40px 20px; /* Reducir el espaciado para pantallas muy pequeñas */
+    }
+
+    .empinfo .company-info h2 {
+        font-size: 2em; /* Reducir el tamaño del título */
+        text-align: center; /* Centrar el título */
+    }
+
+    .empinfo .company-info p {
+        font-size: 1.1em; /* Reducir tamaño del texto */
+        text-align: center; /* Centrar el texto */
+    }
+
+    .video-container iframe {
+        width: 100%; /* Hacer que el video ocupe todo el ancho */
+        height: auto;
+    }
+}
+
+
+/* IMAGENES ADICIONALES  ya con responsive*/
+.adicionalimg h2 {
+    font-size: 5rem; /* Tamaño predeterminado para pantallas grandes */
+    font-family: 'Chakra Petch', sans-serif;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    display: inline-block;
+    border-radius: 8px;
+    opacity: 0; /* Oculto inicialmente */
+    transform: translateY(50px); /* Desplazado hacia abajo inicialmente */
+    transition: all 1s ease-out;
+}
+
+.adicionalimg h2.animate {
+    opacity: 1; /* Visible */
+    transform: translateY(0); /* Vuelve a su posición */
+}
+
+
+/* Ajustes para tablets */
+@media (max-width: 768px) {
+    .adicionalimg h2 {
+        font-size: 3.5rem; /* Reduce el tamaño del texto */
+        padding: 8px; /* Ajusta el padding */
+    }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 480px) {
+    .adicionalimg h2 {
+        font-size: 2.5rem; /* Texto aún más pequeño */
+        padding: 6px; /* Más compacto */
+    }
+}
+.adicionalimg {
+    background: linear-gradient(to right, #da3b2d, #7710c1);
+    padding: 50px 20px; /* Ajustar el padding para pantallas pequeñas */
+    box-sizing: border-box;
+}
+
+.adicionalimg .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas por defecto */
+    gap: 20px; /* Espacio entre imágenes */
+}
+
+.adicionalimg .image-grid img {
+    width: 100%; /* Asegurar que las imágenes ocupen el ancho completo */
+    height: auto; /* Altura automática para mantener la proporción */
+    object-fit: cover; /* Ajusta las imágenes sin deformarlas */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+/* Media Query para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    .adicionalimg .image-grid {
+        grid-template-columns: 1fr; /* Cambiar a una sola columna */
+        gap: 15px; /* Reducir el espacio entre imágenes */
+    }
+
+    .adicionalimg {
+        padding: 30px 15px; /* Reducir el padding */
+    }
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .adicionalimg .image-grid {
+        grid-template-columns: 1fr; /* Mantener una sola columna */
+        gap: 10px; /* Reducir aún más el espacio */
+    }
+
+    .adicionalimg {
+        padding: 20px 10px; /* Padding mínimo para pantallas pequeñas */
+    }
+}
+
+/*PREGUNTAS FRECUENTES*/
+.preguntasfrec {
+    display: flex;
+    flex-direction: c;
+    background: url(https://i.pinimg.com/originals/b9/c5/e5/b9c5e58543b8553bda7f17672ae39eec.gif);
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+    padding: 200px 100px; 
+    box-sizing: border-box;
+    height: 500p;
+}
+.container {
+    max-width: 1000px;
+    max-height: 1000px;
+    margin: 4px auto;
+    padding: 20px;
+    background: linear-gradient(to right, #da3b2d, #7710c1);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(191, 8, 8, 0.1);
+}
+
+/* Contenedor de preguntas con flexbox en una sola fila */
+#preguntasfrec {
+   
+    padding: 40px 0;
+    font-family: 'a r i a l', sans-serif;
+}
+
+/* Contenedor principal */
+.preguntasfrec .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 10px; /* Ajusta el padding */
+    text-align: center;
+    min-height: 800px; 
+    box-sizing: border-box; 
+    overflow: hidden; 
+}
+/* Título principal */
+.preguntasfrec h1 {
+    font-family: Robotica, Arial;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #fffdfd; /* Color gris oscuro */
+}
+
+/* Estilos para las preguntas */
+.faq {
+    background-color: #fff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Asegura que el padding no cause que el contenido se desborde */
+    overflow: hidden; /* Asegura que el contenido dentro de .faq no se desborde */
+}
+/* Cambiar el color del h1 dentro de la sección de preguntas frecuentes */
+.preguntasfrec h1 {
+    color: #fcfbfb; /* Cambia esto por el color que prefieras */
+    font-size: 40px; /* Tamaño del texto (ajústalo según lo que prefieras) */
+    font-weight: 700; /* Peso de la fuente */
+}
+
+/* Título de cada pregunta */
+.faq h2 {
+    font-size: 28px;
+    font-weight: 700;   
+    color: #000000 ; /* Color oscuro para el título */
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Respuesta de la pregunta */
+.faq p {
+    font-size: 26px;
+    color: #000000; /* Gris claro para el texto */
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Efecto hover en las preguntas */
+.faq:hover {
+    background-color: #ee68f3; /* Color de fondo al pasar el ratón */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra más fuerte */
+}
+
+/* Estilo para cuando la respuesta está oculta (opcional si implementas JS para ocultar respuestas) */
+.faq .respuesta-oculta {
+    display: none;
+}
+
+/* Opcional: efecto de transición para el contenedor de la respuesta cuando se expande */
+.faq p {
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+
+
+
+
+/* Sección de Productos */
+.productos {
+    background: linear-gradient(135deg, #da3b2d, #7710c1);
+    padding: 20px 0;
+}
+
+.products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.products-table {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    border-collapse: collapse;
+}
+
+.products-table th {
+    background: rgba(119, 16, 193, 0.1);
+    color: #ffffff !important;
+    padding: 12px; /* Aumenta el padding si lo deseas más grande */
+    font-size: 1.2em !important; /* Aumenta el tamaño de la fuente */
+    font-weight: bold; /* Hace la fuente más gruesa */
+    text-align: left;
+}
+
+.products-table td {
+    padding: 6px 8px;
+    font-size: 1em; /* Aumentar el tamaño de la fuente en las celdas */
+}
+
+.products-table a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.products-table a:hover {
+    color: #7710c1;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .fila {
+        grid-template-columns: 1fr; /* Hacer que la grilla sea de una sola columna */
+        gap: 10px;
+    }
+
+    .item {
+        padding: 10px;
+        font-size: 1em; /* Ajustar el tamaño de texto para mejor legibilidad */
+    }
+
+    .products-table {
+        width: 100%; /* Asegurar que la tabla ocupe todo el ancho disponible */
+        font-size: 0.5em; /* Tamaño de la fuente ajustado */
+    }
+
+    .products-table th,
+    .products-table td {
+        padding: 10px; /* Ajuste de padding para mayor espacio en las celdas */
+        font-size: 1.1em; /* Aumentar tamaño de fuente en pantallas de tabletas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contenido-seccion h2 {
+        font-size: 1.5em; /* Aumentar tamaño del encabezado */
+    }
+
+    .item {
+        padding: 8px;
+        font-size: 1.1em; /* Aumentar tamaño de texto */
+    }
+
+    .products-table th,
+    .products-table td {
+        padding: 8px; /* Ajustar padding */
+        font-size: 1em; /* Aumentar tamaño de fuente para mejor legibilidad */
+    }
+}
+
+
+
+
+/* ESTO SE ENCARGA DEL CSSS DE LOS MENUS DESPLEGABLES*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000; /* Fondo blanco para el dropdown */
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.navbar ul li:hover .dropdown-content {
+    display: block; /* Mostrar el contenido del dropdown al pasar el mouse */
+}
+
+.dropdown-content a {
+    color: #2c3e50; /* Color de texto negro para el dropdown */
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(44, 62, 80, 0.1);
+}
+
+/* Estilos para el submenú */
+.submenu {
+    position: relative;
+}
+
+.submenu-content {
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    left: 100%; /* Mostrar al lado derecho del elemento padre */
+    top: 0;
+    background-color: #000000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.submenu:hover .submenu-content {
+    display: block; /* Mostrar el submenú al pasar el mouse */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Estilo principal del contenido */
+.content {
+    padding: 40px;
+    margin-top: 70px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo para los encabezados */
+h1,
+h2 {
+    margin-bottom: 20px;
+    color: #ffffff; /* Color de los encabezados */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+h1 {
+    font-size: 3.5em; /* Tamaño grande para el título principal */
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700; /* Negrita */
+    
+}
+
+h2 {
+    font-size: 2.5em; /* Tamaño grande para los subtítulos */
+    border-bottom: 3px solid #fd0101; /* Borde rojo */
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+/* Estilo para el párrafo de los elementos */
+.item p {
+    color: #def674 !important; /* Forzar que el color verde se aplique */
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+/* Estilo para las tarjetas */
+.card {
+    background-color: #ecf0f1; /* Color gris claro para las tarjetas */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para los botones */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2980b9; /* Color azul */
+    color: #ffffff; /* Color de texto blanco */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #27ae60; /* Cambio de color al hacer hover */
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries para hacerlo responsivo */
+
+/* Pantallas medianas (tabletas, pantallas de 768px a 1024px) */
+@media (max-width: 1024px) {
+    .content {
+        padding: 20px; /* Menos padding en pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Título más pequeño */
+    }
+
+    h2 {
+        font-size: 2em; /* Subtítulo más pequeño */
+    }
+
+    .item p {
+        font-size: 1em; /* Tamaño de texto más pequeño */
+    }
+
+    .card {
+        padding: 15px; /* Menos padding en las tarjetas */
+    }
+
+    .btn {
+        padding: 8px 16px; /* Botón más pequeño */
+        font-size: 14px; /* Texto más pequeño */
+    }
+}
+
+/* Pantallas pequeñas (teléfonos móviles, pantallas de 480px a 768px) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Título aún más pequeño */
+    }
+
+    h2 {
+        font-size: 1.6em; /* Subtítulo más pequeño */
+    }
+
+    .content {
+        padding: 15px; /* Menos padding */
+    }
+
+    .item p {
+        font-size: 0.9em; /* Texto más pequeño */
+    }
+
+    .card {
+        padding: 10px; /* Menos padding en las tarjetas */
+    }
+
+    .btn {
+        padding: 6px 12px; /* Botón aún más pequeño */
+        font-size: 12px; /* Texto del botón más pequeño */
+    }
+}
+
+/* Pantallas extra pequeñas (dispositivos muy pequeños como teléfonos móviles, pantallas de menos de 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Título muy pequeño */
+    }
+
+    h2 {
+        font-size: 1.4em; /* Subtítulo ajustado */
+    }
+
+    .content {
+        padding: 10px; /* Muy poco padding */
+    }
+
+    .item p {
+        font-size: 0.85em; /* Texto más pequeño */
+    }
+
+    .card {
+        padding: 5px; /* Aún menos padding */
+    }
+
+    .btn {
+        padding: 5px 10px; /* Botón pequeño */
+        font-size: 11px; /* Texto más pequeño */
+    }
+}
+
+
+/* Estilo adicional para el footer */
+footer {
+    background-color: #34495e;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+
+.products-table a {
+    color: #ffffff; /* Color negro para los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.products-table a:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse; /* Colapsar bordes */
+    margin: 20px 0; /* Espacio superior e inferior */
+    background-color: #f0f4f8; /* Fondo plomo */
+}
+.products-table {
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo semi-transparente oscuro para toda la tabla */
+    border-collapse: collapse; /* Asegura que las celdas se comporten bien */
+}
+
+.products-table th,
+.products-table td {
+    padding: 15px; /* Espaciado reducido */
+    text-align: left; /* Alinear texto a la izquierda */
+    border: none; /* Eliminar borde de las celdas */
+    background-color: rgba(0, 0, 0, 0.15); /* Fondo semi-transparente oscuro para las celdas */
+}
+
+.products-table th {
+    background-color: rgba(71, 15, 122, 0.8); /* Fondo semi-transparente para los encabezados */
+    color: #ffffff; /* Color de texto blanco para los encabezados */
+}
+
+.products-table tr {
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo oscuro semi-transparente para las filas */
+}
+
+
+
+/* Estilos para la ruleta de imágenes */
+.image-slider {
+    width: 100%; 
+    height: 600px; 
+    position: relative;
+    overflow: hidden;
+}
+
+.image-slider img {
+    width: 100%;
+    height: 100%;
+    display: none;
+    border-radius: 10px;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.image-slider img.active {
+    display: block; /* Mostrar solo la imagen activa */
+}
+
+.image-slider .controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.image-slider .controls button {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con algo de transparencia */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.image-slider .controls button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Color de fondo blanco al pasar el mouse */
+}
+
+
+/* NAVEGACION INFERIOR */
+footer {
+    background: linear-gradient(135deg, #da3b2d, #7710c1);  
+    padding: 30px 0 10px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+/* Ajustes de los íconos de redes sociales */
+footer .redes {
+    flex: 1;
+    margin-bottom: 20px;
+    color: #000;
+    display: flex;
+    justify-content: center; /* Centrar los íconos de redes sociales */
+    flex-wrap: wrap; /* Permite que los íconos se ajusten a la siguiente línea si es necesario */
+}
+
+footer .redes a {
+    color: #000;
+    display: inline-block;
+    text-decoration: none;
+    border: 0px solid #000000;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 10px; /* Espaciado reducido entre los íconos */
+    font-size: 20px;
+    transition: .3s;
+}
+
+/* Ajustes del botón de volver arriba */
+footer .arriba {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #15312c;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+/* Ajustes para el ícono de WhatsApp */
+.redes a i.fa-whatsapp {
+    color: #ffffff;
+    font-size: 40px;
+}
+
+/* Cambiar el color al pasar el mouse sobre el ícono de WhatsApp */
+.redes a i.fa-whatsapp:hover {
+    color: #ffffff;
+}
+
+/* Ajustes para el ícono de YouTube */
+.redes a i.fa-youtube {
+    color: #ffffff;
+    font-size: 40px;
+}
+
+/* Cambiar el color al pasar el mouse sobre el ícono de YouTube */
+.redes a i.fa-youtube:hover {
+    color: #faf7f7;
+}
+
+/* Estilos responsivos */
+@media (max-width: 728px) {
+    /* Ajustar el pie de página (footer) */
+    footer {
+        padding: 20px 0; /* Espaciado reducido */
+    }
+
+    /* Ajustar el comportamiento de las redes sociales */
+    footer .redes {
+        flex-direction: row; /* En pantallas pequeñas, se alinean en fila */
+        justify-content: center; /* Centrar los íconos */
+    }
+
+    footer .redes a {
+        width: 35px; /* Reducir tamaño de los íconos */
+        height: 35px;
+        line-height: 35px;
+        font-size: 18px; /* Reducir tamaño de fuente */
+    }
+
+    /* Ajustar el botón de volver arriba */
+    footer .arriba {
+        width: 40px; /* Reducir tamaño del botón */
+        height: 40px;
+        font-size: 16px;
+    }
+
+    /* Ajustar el tamaño de los textos dentro de los elementos */
+    .item p {
+        font-size: 14px; /* Reducir tamaño de texto */
+        color: #2ce2dc6d;
+    }
+}
+
+
+/* Cambiar el color cuando el icono de WhatsApp es hovered */
+
+.video-container {
+    text-align: center; /* Centra el video dentro del contenedor */
+    margin-bottom: 20px; /* Espacio entre el video y las imágenes */
+    padding: 10px; /* Espaciado interno para dar un poco de margen alrededor */
+    border: 2px solid #ccc; /* Bordes suaves alrededor del video */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo suave para el contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para el contenedor */
+    max-width: 80%; /* Ajusta el contenedor al 80% del ancho de la pantalla */
+    margin-left: auto;
+    margin-right: auto; /* Centra el contenedor en la página */
+}
+
+.video-container iframe {
+    width: 100%; /* Hace que el iframe ocupe todo el ancho disponible */
+    height: 400px; /* Mantiene la altura fija del video */
+    border-radius: 10px; /* Bordes redondeados para el iframe */
+}
+
+.video-container:hover {
+    background-color: #e0e0e0; /* Cambia el color de fondo cuando pasa el ratón por encima */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más prominente al hacer hover */
+}
+
+@media (max-width: 768px) {
+    .video-container {
+        width: 95%; /* Ancho del contenedor ajustado en pantallas pequeñas */
+    }
+
+    .video-container iframe {
+        height: 250px; /* Ajusta la altura del video en pantallas más pequeñas */
+    }
+}
+/* componetes css */
+#componente {
+    background: linear-gradient(to right, #da3b2d, #9b5bc9);
+    padding: 20px 0; /* Espaciado superior e inferior */
+}
+.modal-content h2 {
+    color: #333; /* Cambia el color a gris oscuro */
+}
+
+.product-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; /* Espacio entre productos */
+        max-width: 1000px;
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        justify-content: center; /* Centra la galería */
+        margin: 0 auto; /* Centra la galería horizontalmente */
+}
+    
+    /* Estilos para los productos */
+    .product-item {
+        flex: 1 1 calc(25% - 20px); /* 4 productos por fila */
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.3s;
+        max-width: calc(25% - 20px);
+        display: flex;
+        flex-direction: column; /* Alinea los elementos en columna (imagen y título) */
+        justify-content: center; /* Centra las imágenes */
+        align-items: center; /* Centra las imágenes verticalmente */
+    }
+    
+    .product-item img {
+        width: 100%; /* Hace que la imagen ocupe todo el contenedor */
+        height: 200px;
+        object-fit: cover; /* Recorta la imagen para que llene el área sin distorsionarse */
+        border-radius: 5px;
+    }
+    
+    /* Título debajo de la imagen */
+    .product-item h3 {
+        margin-top: 10px; /* Espacio entre la imagen y el título */
+        font-size: 1.2rem;
+        color: #ffffff; /* Color del texto del título */
+        text-align: center; /* Asegura que el título esté centrado */
+    }
+    
+    /* Modal */
+    .modal {
+        display: none; /* Inicialmente oculto */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center; /* Centra el contenido del modal */
+    }
+    
+    /* Modal Content */
+    .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        max-width: 800px;
+        width: 90%;
+        display: flex;
+        flex-direction: row; /* Alinea la imagen y el texto en fila */
+        gap: 20px;
+        position: relative;
+        justify-content: center;
+        align-items: center; /* Centra verticalmente todo el contenido */
+    }
+    
+    /* Imagen dentro del modal */
+    .modal-content img {
+        width: 40%; /* Ajustamos el tamaño de la imagen */
+        height: auto;
+        max-width: none;
+        max-height: 70vh; /* Mantiene la imagen dentro de la pantalla */
+        border-radius: 5px;
+        display: block;
+        margin: 0;
+    }
+    
+    /* Detalles del producto en el modal */
+    .modal-details {
+        flex: 1;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra el texto verticalmente */
+        align-items: flex-start; /* Alinea el texto a la izquierda */
+    }
+    
+    /* Botón para cerrar el modal */
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        color: #333;
+    }
+/* rankig tabla principal RANKINGGG*/
+.table {
+    background: linear-gradient(to top, rgba(23, 42, 58, 0.8), rgba(34, 53, 77, 1)), url(https://res.cloudinary.com/dx80kll1o/image/upload/v1732074595/gaming2_eqpzgk.jpg);
+    background-size: cover; /* Asegura que la imagen de fondo cubra toda el área */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    height: 100vh; /* Usa el 100% de la altura del viewport */
+    margin: 0; /* Elimina márgenes por defecto del contenedor */
+    padding: 0; /* Elimina padding por defecto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .table {
+        padding: 0 5%; /* Ajusta el padding a pantallas más pequeñas */
+    }
+}
+
+/* Media Queries para pantallas extra pequeñas */
+@media (max-width: 480px) {
+    .table {
+        padding: 0 2%; /* Ajusta aún más el padding en dispositivos más pequeños */
+    }
+}
+
+
+
+    /* colores titulos de rankings///PROCESADORES SUB MENUS */
+    .titulo-amd {
+        color: #c56300; 
+    }
+    .titulo-intel {
+        color: #0071c5; 
+    }
+    .titulo-nvidia {
+        color: #21a812; 
+    }
+    .titulo-radeon{
+        color: #e2a520;
+    }
+    .titulo-laptop{
+        color: #f87205;
+
+    }
+    /* titulos recomendaciones*/
+    .titulo-tucon{
+        color: #616ec3;
+    }
+    .titulo-concetu{
+        color: #1d8a76;
+    }
+    .titulo-vitu{
+        color: #c81616;
+    }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC TECH - Nuestros Servicios</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/63040c5298.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="/index.html"><img src="https://res.cloudinary.com/dum4okaqx/image/upload/v1732220316/LOGO2_dclip5.png" alt="PC TECH Logo"></a>
+                    <h1>PC TECH</h1>
+                </div>
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="services.html">Servicios</a></li>
+                    <li><a href="advertisements.html">Promociones</a></li>
+                    <li><a href="about.html">Nosotros</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <!-- <li><a href="admin_login.php" class="login-icon"><i class="fa-solid fa-user"></i></a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>Nuestros Servicios</h2>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <div class="service-item">
+                    <i class="fa-solid fa-computer"></i>
+                    <h3>Reparación de Ordenadores y Portátiles</h3>
+                    <p>Solucionamos problemas de hardware y software en todo tipo de equipos.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-gears"></i>
+                    <h3>Instalación de Componentes y Programas</h3>
+                    <p>Actualizamos y optimizamos tu equipo con los últimos componentes y software.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h3>Personalización de Computadoras</h3>
+                    <p>Diseñamos y construimos el equipo perfecto para tus necesidades específicas.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-shield-virus"></i>
+                    <h3>Análisis de Virus y Malware</h3>
+                    <p>Protegemos tu equipo contra amenazas cibernéticas y eliminamos software malicioso.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-laptop-medical"></i>
+                    <h3>Reparación de Pantallas y Componentes Electrónicos</h3>
+                    <p>Restauramos pantallas dañadas y reparamos componentes electrónicos defectuosos.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-wifi"></i>
+                    <h3>Configuración de Redes y Wi-Fi</h3>
+                    <p>Optimizamos tu conexión a internet y configuramos redes seguras y eficientes.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-database"></i>
+                    <h3>Respaldo y Recuperación de Datos</h3>
+                    <p>Aseguramos tus datos importantes y recuperamos información perdida.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 PC TECH - Todos los derechos reservados</p>
+            <!-- <ul class="social-links">
+                <li><a href="#" class="icon-facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#" class="icon-twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" class="icon-instagram"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul> -->
+        </div>
+    </footer>
+
+    <script>
+        //menu hamburguesa
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector("nav ul");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        // Cerrar el menú cuando se hace clic en un enlace
+        document.querySelectorAll("nav ul li a").forEach((link) => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            });
+        });
+    </script>
+</body>
+
+</html>

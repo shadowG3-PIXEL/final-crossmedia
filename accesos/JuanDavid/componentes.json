@@ -1,0 +1,58 @@
+{
+    "procesador": [
+        { "nombre": "Intel Core i5", "precio": 1750 },
+        { "nombre": "AMD Ryzen 5", "precio": 1400 },
+        { "nombre": "Intel Core i7", "precio": 2500 },
+        { "nombre": "AMD Ryzen 7", "precio": 2100 },
+        { "nombre": "Intel Core i9", "precio": 3500 },
+        { "nombre": "AMD Ryzen 9", "precio": 3000 }
+    ],
+    "tarjeta_grafica": [
+        { "nombre": "NVIDIA GTX 1650", "precio": 2100 },
+        { "nombre": "AMD Radeon RX 580", "precio": 1960 },
+        { "nombre": "NVIDIA GTX 1660", "precio": 2800 },
+        { "nombre": "AMD Radeon RX 5700", "precio": 3500 },
+        { "nombre": "NVIDIA RTX 3060", "precio": 4900 },
+        { "nombre": "NVIDIA RTX 4080", "precio": 9800 }
+    ],
+    "ram": [
+        { "nombre": "8GB DDR4", "precio": 700 },
+        { "nombre": "16GB DDR4", "precio": 1260 },
+        { "nombre": "32GB DDR4", "precio": 2100 },
+        { "nombre": "16GB DDR5", "precio": 1400 },
+        { "nombre": "64GB DDR4", "precio": 2800 },
+        { "nombre": "64GB DDR5", "precio": 3500 }
+    ],
+    "almacenamiento": [
+        { "nombre": "SSD 256GB", "precio": 350 },
+        { "nombre": "HDD 1TB", "precio": 490 },
+        { "nombre": "SSD 512GB", "precio": 700 },
+        { "nombre": "HDD 2TB", "precio": 980 },
+        { "nombre": "SSD 1TB", "precio": 1400 },
+        { "nombre": "HDD 4TB", "precio": 1400 }
+    ],
+    "fuente_poder": [
+        { "nombre": "600W", "precio": 560 },
+        { "nombre": "750W", "precio": 700 },
+        { "nombre": "850W", "precio": 980 },
+        { "nombre": "1000W", "precio": 1400 },
+        { "nombre": "1200W", "precio": 1680 },
+        { "nombre": "1500W", "precio": 2100 }
+    ],
+    "cases": [
+        { "nombre": "Case básico", "precio": 280 },
+        { "nombre": "Case gaming", "precio": 630 },
+        { "nombre": "Case ATX", "precio": 700 },
+        { "nombre": "Case Micro-ATX", "precio": 490 },
+        { "nombre": "Case RGB", "precio": 1050 },
+        { "nombre": "Case para PC de servidor", "precio": 1400 }
+    ],
+    "refrigeracion": [
+        { "nombre": "Aire básico", "precio": 210 },
+        { "nombre": "Líquida", "precio": 840 },
+        { "nombre": "Aire con RGB", "precio": 350 },
+        { "nombre": "Refrigeración líquida 240mm", "precio": 980 },
+        { "nombre": "Refrigeración líquida 360mm", "precio": 1400 },
+        { "nombre": "Aire avanzado", "precio": 560 }
+    ]
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovaciones en Tecnología de PC</title>
+    <link rel="stylesheet" href="cssprinci.css"> 
+    <link rel="stylesheet" href="cssarmapc.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <section id="navegacion" class="navegacion">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/index.html" class="logo-texto">
+                    InnovaCompuTech
+                </a>
+                    
+            </div>
+            <div class="nombrelogo">
+            </div>
+            <!-- Menú principal -->
+            <ul class="menu">
+                <li><a style="font-size: 25px; font-weight: 700;" href="index.html"><i>Inicio</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="novedades.html"><i>Novedades</i></a></li>
+                <li>
+                    <a style="font-size: 25px; font-weight: 700;" href="welcometop.html"><i>Ranking</i></a>
+                </li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="armapc.html"><i>Arma tu pc</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="contacto.html"><i>Contacto</i></a></li>
+            </ul>
+            
+            <!-- Botón hamburguesa -->
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+        </nav>
+    
+        <!-- Menú desplegable en móvil -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="welcometop.html">Ranking</a></li>
+                <li><a href="armapc.html">Arma tu pc</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </section>
+    
+    
+
+    <div class="content">
+    <section>       
+            <div class="armapccon">
+            <form id="pc-config-form" onsubmit="event.preventDefault(); calcularPrecio();">
+                <h1>Arma tu PC</h1>
+                <!-- Procesador -->
+                <label for="procesador">Selecciona un Procesador:</label>
+                <select id="procesador">
+                    <option value="0">Selecciona un procesador</option>
+                </select>
+                <!-- Tarjeta Gráfica -->                 
+                <label for="tarjeta_grafica">Selecciona una Tarjeta Gráfica:</label>                 
+                <select id="tarjeta_grafica" >                     
+                    <option value="" disabled selected hidden>Selecciona una  tarjeta grafica</option>                 
+                </select>
+                <!-- RAM -->
+                <label for="ram">Selecciona la Memoria RAM:</label>
+                <select id="ram">
+                    <option value="0">-- Selecciona --</option>
+                </select>
+                <!-- Almacenamiento -->
+                <label for="almacenamiento">Selecciona el Almacenamiento:</label>
+                <select id="almacenamiento">
+                    <option value="0">-- Selecciona --</option>
+                </select>
+                <!-- Fuente de Poder -->
+                <label for="fuente_poder">Selecciona una Fuente de Poder:</label>
+                <select id="fuente_poder">
+                    <option value="0">-- Selecciona --</option>
+                </select>
+                <!-- Case -->
+                <label for="cases">Selecciona un Case:</label>
+                <select id="cases">
+                    <option value="0">-- Selecciona --</option>
+                </select>
+                <!-- Refrigeración -->
+                <label for="refrigeracion">Selecciona un Sistema de Refrigeración:</label>
+                <select id="refrigeracion">
+                    <option value="0">-- Selecciona --</option>
+                </select>
+
+                <div class="button-container">
+                    <button type="submit">Calcular Precio</button>
+                    <button type="button" onclick="borrarOpciones()">Borrar Opciones</button>
+                </div>
+                <div class="total" id="precio-total"></div>
+
+            </form>
+    </section>    
+        
+    </div>  
+    
+
+    <script>
+        // Cargar los datos de los componentes desde un archivo JSON
+        fetch('componentes.json')
+            .then(response => response.json())
+            .then(data => {
+                for (const [categoria, opciones] of Object.entries(data)) {
+                    const selectElement = document.getElementById(categoria);
+                    opciones.forEach(opcion => {
+                        const optionElement = document.createElement("option");
+                        optionElement.value = opcion.precio;
+                        optionElement.textContent = `${opcion.nombre} - Bs ${opcion.precio}`;
+                        selectElement.appendChild(optionElement);
+                    });
+                }
+            })
+            .catch(error => console.error('Error cargando el archivo JSON:', error));
+
+        // Función para calcular el precio total
+        function calcularPrecio() {
+            let total = 0;
+            document.querySelectorAll("select").forEach(select => {
+                total += parseFloat(select.value) || 0;
+            });
+            document.getElementById("precio-total").textContent = `Precio total: Bs ${total}`;
+        }
+
+        // Función para borrar las opciones seleccionadas
+        function borrarOpciones() {
+            document.getElementById("pc-config-form").reset();
+            document.getElementById("precio-total").textContent = "";
+        }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    // Comprobar el tamaño de la pantalla al cargar la página
+    if (window.innerWidth <= 768) {
+        // Asegurarse de que el botón hamburguesa sea visible en pantallas pequeñas
+        hamburger.style.display = 'block';
+        mobileMenu.style.display = 'block';  // Mostrar el menú móvil
+    } else {
+        // En pantallas grandes, no mostrar el menú móvil ni el botón hamburguesa
+        hamburger.style.display = 'none';
+        mobileMenu.style.display = 'none';
+    }
+
+    // Alternar la visibilidad del menú móvil al hacer clic en el botón hamburguesa
+    hamburger.addEventListener('click', function() {
+        mobileMenu.classList.toggle('open'); // Abrir o cerrar el menú
+        document.body.classList.toggle('menu-open'); // Asegurar que el contenido no se desplace
+    });
+
+    // Actualizar el menú si el tamaño de la ventana cambia
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            hamburger.style.display = 'none';
+            mobileMenu.style.display = 'none'; // Ocultar menú en pantallas grandes
+        } else {
+            hamburger.style.display = 'block';
+            mobileMenu.style.display = 'block';  // Mostrar menú móvil en pantallas pequeñas
+        }
+    });
+});
+
+
+    </script>
+</body>
+<footer>
+    <a href="#" class="arriba">
+        <i class="fa-solid fa-angles-up"></i>
+    </a><section id="redes">
+        <section id="productos" class="productos">
+            <div class="products-container">
+                <table class="products-table">
+                    <tr>
+                        <th>Información</th>
+                        <th>Artículos</th>
+                        <th>Guías</th>
+                        <th>Soporte</th>
+                        <th>Nosotros</th>
+                    </tr>
+                    <tr>
+                        <td><a href="novedades.html">Novedades</a></td>
+                        <td><a href="welcometop.html">Ranking</a></td>
+                        <td><a href="armapc.html">Arma tu PC</a></td>
+                        <td><a href="formu.html">Formulario</a></td>
+                        <td><a href="contacto.html">Contacto</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"></a></td>
+                        <td><a href="graficorank.html"></a></td>
+                        <td><a href="recomendaciones.html">Tips</a></td>
+                        <td><a href="preguntas.html">FAQs</a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    <div class="redes">
+        <a href="https://www.youtube.com/@InnovaComputech"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://wa.me/59160400151?text=Hola,%20vi%20la%20pagina%20web%20quisiera%20asesoramiento%20en%20computadoras"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+</section>
+</footer>
+</html>

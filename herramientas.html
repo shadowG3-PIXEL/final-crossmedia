@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>#herramientas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 1400px;
+        margin: 50px auto;
+        padding: 0 20px;
+    }
+    
+    .title {
+        text-align: center;
+        font-size: 2.5em;
+        color: #ffffff;
+        margin-bottom: 40px;
+        width: 100%;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .herramienta {
+        background-color: #f4f4f4;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 300px;
+        margin: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 25px;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .herramienta:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .herramienta img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        margin-bottom: 20px;
+    }
+    
+    .herramienta .info {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .herramienta .info h3 {
+        font-size: 1.4em;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    
+    .herramienta .info p {
+        font-size: 1em;
+        color: #666;
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+    
+    .herramienta .btn {
+        padding: 10px 20px;
+        background-color: #0073e6;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        margin-top: auto;
+    }
+    
+    .herramienta .btn:hover {
+        background-color: #005bb5;
+    }
+    
+    /* Media Queries */
+    @media screen and (max-width: 1200px) {
+        #herramientas {
+            padding: 0 10px;
+        }
+        
+        .herramienta {
+            max-width: 280px;
+            margin: 15px;
+        }
+    }
+    
+    @media screen and (max-width: 992px) {
+        #herramientas {
+            padding: 0 20px;
+        }
+        
+        .herramienta {
+            max-width: 350px;
+            margin: 15px;
+            width: calc(50% - 60px);
+        }
+        
+        .title {
+            font-size: 2.2em;
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        #herramientas {
+            padding: 0 15px;
+        }
+        
+        .herramienta {
+            width: 100%;
+            max-width: 100%;
+            margin: 15px 0;
+        }
+        
+        .title {
+            font-size: 2em;
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        .herramienta {
+            padding: 15px;
+        }
+        
+        .herramienta img {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .title {
+            font-size: 1.8em;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="/index.html" class="logo">SMART BUSSINES</a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="Disertantes.html" style="--i:0;">Disertantes</a>
+            <a href="acerca.html" style="--i:1;">Acerca de</a>
+            <a href="Galería.html" style="--i:2;">Galeria</a>
+            <a href="herramientas.html" style="--i:3;">Herramientas</a>
+        </nav>
+    </header>
+    <h1><br><br></h1>
+    <main>
+<div id="herramientas">
+    <h2 class="title">Herramientas que utilizamos</h2>
+    <div class="herramienta">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN38qIx9MEyOa4Yuz6G9lwZE4OOqJ2hi5twQ&s" alt="Cloudinary" />
+        <div class="info">
+            <h3>Cloudinary</h3>
+            <p>Cloudinary es nuestra plataforma de gestión de imágenes y videos en la nube. Nos permite almacenar, editar y optimizar medios de manera rápida y eficiente, mejorando la experiencia de los usuarios en nuestro sitio.</p>
+            <a href="https://cloudinary.com/" target="_blank" class="btn">Visitar Cloudinary</a>
+        </div>
+    </div>
+
+    <div class="herramienta">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" />
+        <div class="info">
+            <h3>GitHub</h3>
+            <p>GitHub es la plataforma que utilizamos para alojar y gestionar nuestro código. Permite colaboración, control de versiones y despliegue de proyectos de manera eficiente, con soporte para todas nuestras necesidades de desarrollo.</p>
+            <a href="https://github.com/" target="_blank" class="btn">Visitar GitHub</a>
+        </div>
+    </div>
+
+    <div class="herramienta">
+        <img src="https://images.ctfassets.net/crb83veve8xb/2VaNf5PhpBlvKAUKYfmefe/5fdaf99f05704485b02e14e8d4addefb/vercel.webp" alt="Vercel" />
+        <div class="info">
+            <h3>Vercel</h3>
+            <p>Vercel es nuestra plataforma de despliegue de aplicaciones frontend. Nos ayuda a desplegar nuestras aplicaciones web de manera rápida y sencilla, ofreciendo rendimiento excepcional y soporte para frameworks como Next.js.</p>
+            <a href="https://vercel.com/" target="_blank" class="btn">Visitar Vercel</a>
+        </div>
+    </div>
+
+</div>
+
+    </main>
+        
+</body>
+</html>

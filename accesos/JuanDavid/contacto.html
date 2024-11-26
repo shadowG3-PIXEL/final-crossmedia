@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Blog de Tecnología PC</title>
+    <link rel="stylesheet" href="cssprinci.css"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <style>
+         /* Estilos generales */
+    .contact-container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .big-logo {
+        width: 400px;
+        animation: float 2s infinite;
+    }
+
+    /* Animación del logo */
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+   /* Contenedor para la lluvia de consolas */
+   .rain-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Limita la altura donde caerán las consolas */
+    margin: 20px 0; /* Espaciado antes del logo */
+    overflow: hidden; /* Asegura que las consolas fuera del contenedor no sean visibles */
+}
+
+.console {
+    position: absolute;
+    top: -100px; /* Empieza fuera de la pantalla */
+    width: 50px;
+    height: auto;
+    animation: fall linear infinite; /* Animación infinita */
+    opacity: 0.8; /* Añade algo de transparencia para evitar sobrecarga visual */
+    pointer-events: none; /* Desactiva eventos en las consolas para que no afecten la interacción */
+}
+
+/* Animación para las consolas */
+@keyframes fall {
+    0% {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(300px); /* Caer hasta el fondo del contenedor */
+        opacity: 0; /* Desaparece al llegar al fondo */
+    }
+}
+
+    /* Resto de estilos, mantenemos todo igual */
+    .contact-card,
+    .blog-features {
+        background: #f8f9fa;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .contact-card h2, .blog-features h2 {
+        margin-bottom: 20px;
+        color: #346ead;
+        text-align: center;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .feature-item {
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: #fff;
+        transition: transform 0.3s ease;
+        text-align: center;
+    }
+
+    .feature-item:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Media Queries para dispositivos móviles */
+    @media screen and (max-width: 768px) {
+        /* Ajustes generales */
+        .contact-container {
+            padding: 15px;
+        }
+
+        .big-logo {
+            width: 300px;
+        }
+        
+        .features-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .big-logo {
+            width: 250px;
+        }
+    }
+
+    /* Estilos generales */
+.contact-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.big-logo {
+    width: 400px;
+    animation: float 2s infinite;
+}
+
+
+
+.contact-card,
+.blog-features {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: left;
+    margin-top: 20px;
+}
+
+.contact-card h2, .blog-features h2 {
+    margin-bottom: 20px;
+    color: #346ead;
+    text-align: center;
+}
+
+/* Grid de características */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.feature-item {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item h3 {
+    color: #a833da;
+    margin-bottom: 10px;
+}
+
+/* Iconos de redes sociales */
+i.fa-whatsapp {
+    color: #25D366;
+    font-size: 40px;
+}
+
+i.fa-youtube {
+    color: #d50b0b;
+    font-size: 40px;
+}
+
+i.fa-twitter {
+    color: #0b95d5;
+    font-size: 40px;
+}
+
+/* Sección de fundadores */
+.founders-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.founders-section h2 {
+    font-size: 2em;
+    color: #0071c5;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.founders-section .features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.founders-section .feature-item {
+    background-color: #ffffff;
+    width: 280px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.founders-section .feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.founders-section .feature-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.founders-section .feature-item h3 {
+    font-size: 1.2em;
+    color: #0071c5;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.founders-section .feature-item p {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Media Queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    /* Ajustes generales */
+    .contact-container {
+        padding: 15px;
+    }
+
+    .big-logo {
+        width: 300px;
+    }
+
+    /* Reducción de padding en las tarjetas */
+    .contact-card, .blog-features {
+        padding: 20px;
+    }
+
+    /* Ajustar el grid para una mejor visualización en pantallas más pequeñas */
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .founders-section .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .founders-section .feature-item {
+        width: 90%;
+    }
+
+    .founders-section h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Ajustes para pantallas muy pequeñas (móviles) */
+    .big-logo {
+        width: 250px;
+    }
+
+    .contact-card, .blog-features {
+        padding: 15px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-item {
+        padding: 15px;
+    }
+
+    .founders-section .feature-item {
+        width: 80%;
+    }
+
+    .founders-section h2 {
+        font-size: 1.5em;
+    }
+
+    .feature-item h3 {
+        font-size: 1.1em;
+    }
+
+    .feature-item p {
+        font-size: 0.9em;
+    }
+}
+.feature-item img {
+    width: 80%;  /* Ajusta el tamaño al 80% del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    max-width: 200px; /* Limita el tamaño máximo de la imagen */
+    display: block;  /* Elimina el espacio inferior de la imagen */
+    margin: 0 auto;  /* Centra la imagen dentro del contenedor */
+}
+p {
+            margin-bottom: 15px; /* Espacio entre los párrafos */
+        }
+
+    </style>
+</head>
+<body>
+   
+    <section id="navegacion" class="navegacion">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/index.html" class="logo-texto">
+                    InnovaCompuTech
+                </a>
+                    
+            </div>
+            <div class="nombrelogo">
+            </div>
+            <!-- Menú principal -->
+            <ul class="menu">
+                <li><a style="font-size: 25px; font-weight: 700;" href="index.html"><i>Inicio</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="novedades.html"><i>Novedades</i></a></li>
+                <li>
+                    <a style="font-size: 25px; font-weight: 700;" href="welcometop.html"><i>Ranking</i></a>
+                </li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="armapc.html"><i>Arma tu pc</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="contacto.html"><i>Contacto</i></a></li>
+            </ul>
+            
+            <!-- Botón hamburguesa -->
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+        </nav>
+    
+        <!-- Menú desplegable en móvil -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="welcometop.html">Ranking</a></li>
+                <li><a href="armapc.html">Arma tu pc</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="content">
+        <div class="contact-container">
+            <div class="rain-container">
+                <a href="verconsul.php">
+                    <img src="https://res.cloudinary.com/dx80kll1o/image/upload/v1732401472/listo2_wbw1w2.png" alt="Logo del Blog" class="big-logo">
+                </a>
+            </div> <!-- Lluvia de consolas aquí -->
+            
+            
+            <div class="contact-card">
+                <h2 class="contacino">Contacto Equipo InnovaCompuTech</h2>
+                <p><strong>Gmail Principal:</strong> 
+                    <a href="mailto:innovacomputech@gmail.com?subject=Consulta&body=Hola, quisiera más información sobre...">InnovaCompuTech@Gmail.com</a>
+                </p>
+                
+                <p><strong>Gmail para Noticias:</strong> 
+                    <a href="mailto:duckgg89@gmail.com?subject=Consulta&body=Hola, quisiera recibir más información sobre las últimas noticias de tecnología.">duckgg89@gmail.com</a>
+                </p>
+                <p><strong>Gmail para Reviews:</strong> 
+                    <a href="mailto:jyknge@gmail.com?subject=Consulta&body= hola quisiera compartir mi review sobre...">jyknge@gmail.com</a>
+                </p>
+                <p><strong>Tiempo de Respuesta:</strong> 24-48 horas</p>
+                <h2>Redes y Comunidad</h2>
+                <p><strong><i class="fab fa-whatsapp"></i> WhatsApp:</strong>   <a href="https://wa.me/59160400151?text=Hola,%20vi%20la%20pagina%20web%20quisiera%20asesoramiento%20en%20computadoras" target="_blank">
+                    Escríbenos a nuestro WhatsApp
+                  </a></p>
+                <p><strong><i class="fab fa-youtube"></i>YouTube:</strong> <a href="https://www.youtube.com/@InnovaComputech">www.youtube.com/@InnovaCompuTech</a></p>
+                <p><strong><i class="fab fa-tiktok"></i> TikTok:</strong> <a href="https://www.tiktok.com/@innovacomputech?is_from_webapp=1&sender_device=pc">www.tiktok.com/@InnovaCompuTech</a></p>
+
+            </div>
+
+            <div class="blog-features">
+                <h2>Lo Que Encontrarás en Nuestro "Blog"</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Reviews</h3>
+                        <img src="https://i.pinimg.com/originals/a6/21/10/a621108b69b169f0509e0664187768a9.gif" alt="Icono de limpieza"><br>
+                        <p>Análisis profundos de los últimos componentes y periféricos para PC</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Consejos</h3>
+                        <img src="https://inspired360g.com/wp-content/uploads/2020/10/fin.gif" alt="Icono de limpieza"><br>
+                        <p>Pruebas de rendimiento y comparativas entre diferentes componentes</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Noticias</h3>
+                        <img src="https://cdn-icons-gif.flaticon.com/6172/6172536.gif" alt="Icono de limpieza">
+                        <p>Las últimas novedades del mundo de la tecnología y hardware</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="blog-features founders-section">
+                <h2>Fundadores de InnovaCompuTech</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <img src="https://res.cloudinary.com/dx80kll1o/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1732484374/bdzgqod2q3ihtl0imgkx.jpg" alt="Jose" class="feature-image">
+                        <h3>Jose A. Janco Bustos</h3>
+                        <p>Encargado de realizar análisis técnicos y escribir reseñas detalladas.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="https://res.cloudinary.com/dy2v6grcp/image/upload/v1732463412/r9k4gbo2aaxmvclsq12a.jpg " alt="Jeyko" class="feature-image">
+                        <h3>Jeyko R. Medina Gutierrez</h3>
+                        <p> Responsable de realizar benchmarks y comparativas entre productos.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1732483780/m2_hssev8.jpg" alt="Juan" class="feature-image">
+                        <h3>Juan D. Cano Ordes</h3>
+                        <p>Especialista en noticias y tendencias tecnológicas, se enfoca en novedades del mercado.</p>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            </div>
+            
+            </div>
+            
+        </div>
+    </div>
+    <footer>
+        <a href="#" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a><section id="redes">
+            <section id="productos" class="productos">
+                <div class="products-container">
+                    <table class="products-table">
+                        <tr>
+                            <th>Información</th>
+                            <th>Artículos</th>
+                            <th>Guías</th>
+                            <th>Soporte</th>
+                            <th>Nosotros</th>
+                        </tr>
+                        <tr>
+                            <td><a href="novedades.html">Novedades</a></td>
+                            <td><a href="welcometop.html">Ranking</a></td>
+                            <td><a href="armapc.html">Arma tu PC</a></td>
+                            <td><a href="formu.html">Formulario</a></td>
+                            <td><a href="contacto.html">Contacto</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"></a></td>
+                            <td><a href="graficorank.html"></a></td>
+                            <td><a href="recomendaciones.html">Tips</a></td>
+                            <td><a href="preguntas.html">FAQs</a></td>
+                            <td><a href="#"></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        <div class="redes">
+            <a href="https://www.youtube.com/@InnovaComputech"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://wa.me/59160400151?text=Hola,%20vi%20la%20pagina%20web%20quisiera%20asesoramiento%20en%20computadoras"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </section>
+    </footer>
+    <script src="script1.js"></script>  
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const rainContainer = document.querySelector(".rain-container");
+
+            const consoleImages = [
+                "https://cdn.icon-icons.com/icons2/3646/PNG/96/offer_discount_sales_system_pc_icon_227990.png",
+                "https://cdn.icon-icons.com/icons2/1852/PNG/96/iconfinder-desktoppc-4417102_116632.png",
+                "https://cdn.icon-icons.com/icons2/2357/PNG/96/office_automation_laptop_computer_icon_143304.png",
+                "https://cdn.icon-icons.com/icons2/829/PNG/96/TES_64_icon-icons.com_66599.png",
+                "https://cdn.icon-icons.com/icons2/829/PNG/96/GS_icon-icons.com_66597.png",
+                "https://cdn.icon-icons.com/icons2/829/PNG/96/mBox_360_icon-icons.com_66593.png",
+                "https://cdn.icon-icons.com/icons2/3315/PNG/96/controller_gamepad_game_controller_joystick_console_gaming_console_video_game_egames_esports_icon_209387.png",
+                "https://cdn.icon-icons.com/icons2/3053/PNG/96/steam_alt_macos_bigsur_icon_189698.png",
+                "https://cdn.icon-icons.com/icons2/2699/PNG/96/youtube_logo_icon_168737.png",
+                "https://cdn.icon-icons.com/icons2/1829/PNG/96/gamepad-115834_115795.png",
+                "https://cdn.icon-icons.com/icons2/1838/PNG/96/gameboygames-116042_115994.png"
+            ];
+
+            const createConsole = () => {
+                const consoleImg = document.createElement("img");
+                const randomImage = consoleImages[Math.floor(Math.random() * consoleImages.length)];
+                consoleImg.src = randomImage;
+                consoleImg.classList.add("console");
+
+                consoleImg.style.left = `${Math.random() * 100}vw`;
+                consoleImg.style.animationDuration = `${Math.random() * 3 + 2}s`; // Velocidad aleatoria
+                consoleImg.style.opacity = Math.random() * 0.5 + 0.5; // Opacidad aleatoria
+
+                rainContainer.appendChild(consoleImg);
+
+                // Elimina la consola después de que haya salido de la pantalla
+                setTimeout(() => {
+                    rainContainer.removeChild(consoleImg);
+                }, 5000);
+            };
+
+            setInterval(createConsole, 300);
+        });
+    </script>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+    
+        // Comprobar el tamaño de la pantalla al cargar la página
+        if (window.innerWidth <= 768) {
+            // Asegurarse de que el botón hamburguesa sea visible en pantallas pequeñas
+            hamburger.style.display = 'block';
+            mobileMenu.style.display = 'block';  // Mostrar el menú móvil
+        } else {
+            // En pantallas grandes, no mostrar el menú móvil ni el botón hamburguesa
+            hamburger.style.display = 'none';
+            mobileMenu.style.display = 'none';
+        }
+    
+        // Alternar la visibilidad del menú móvil al hacer clic en el botón hamburguesa
+        hamburger.addEventListener('click', function() {
+            mobileMenu.classList.toggle('open'); // Abrir o cerrar el menú
+            document.body.classList.toggle('menu-open'); // Asegurar que el contenido no se desplace
+        });
+    
+        // Actualizar el menú si el tamaño de la ventana cambia
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                hamburger.style.display = 'none';
+                mobileMenu.style.display = 'none'; // Ocultar menú en pantallas grandes
+            } else {
+                hamburger.style.display = 'block';
+                mobileMenu.style.display = 'block';  // Mostrar menú móvil en pantallas pequeñas
+            }
+        });
+    });
+    </script>
+<script>
+  let currentIndex = 0;
+const images = document.querySelectorAll('.image-slider img');
+
+function showNextImage() {
+    images[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add('active');
+}
+
+function showPrevImage() {
+    images[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    images[currentIndex].classList.add('active');
+}
+
+document.getElementById('nextBtn').addEventListener('click', showNextImage);
+document.getElementById('prevBtn').addEventListener('click', showPrevImage);
+
+images[currentIndex].classList.add('active');  // Establecer la primera imagen como activa
+
+</script>
+
+<!-- animacion de la letra de carrussel de imagenes -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".animate-on-scroll");
+
+    const scrollHandler = () => {
+        elements.forEach((el) => {
+            const rect = el.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+            if (isVisible) {
+                el.classList.add("animate");
+            }
+        });
+    };
+
+    window.addEventListener("scroll", scrollHandler);
+    scrollHandler(); // Ejecutar al cargar la página
+});
+</script>
+</html>

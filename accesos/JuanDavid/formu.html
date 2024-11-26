@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovaciones en Tecnología de PC</title>
+    <link rel="stylesheet" href="cssprinci.css"> 
+    <link rel="stylesheet" href="cssformulario.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+</head>
+<body>
+    <section id="navegacion" class="navegacion">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#" class="logo-texto">
+                    InnovaCompuTech
+                </a>
+                    
+            </div>
+            <div class="nombrelogo">
+            </div>
+            <!-- Menú principal -->
+            <ul class="menu">
+                <li><a style="font-size: 25px; font-weight: 700;" href="index.html"><i>Inicio</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="novedades.html"><i>Novedades</i></a></li>
+                <li>
+                    <a style="font-size: 25px; font-weight: 700;" href="welcometop.html"><i>Ranking</i></a>
+                </li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="armapc.html"><i>Arma tu pc</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="contacto.html"><i>Contacto</i></a></li>
+            </ul>
+            
+            <!-- Botón hamburguesa -->
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+        </nav>
+    
+        <!-- Menú desplegable en móvil -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="welcometop.html">Ranking</a></li>
+                <li><a href="armapc.html">Arma tu pc</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </section>
+   <div class="container">
+    <h1>Contacto</h1>
+    <p>Si tienes dudas, sugerencias o necesitas más información sobre tecnología de PC, completa el formulario y recibirás una respuesta en el menor tiempo posible.</p>
+    
+    <form id="contact-form" method="POST" onsubmit="mostrarConfirmacion(event)">
+        <label for="nombre">Nombres:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tus nombres" required>
+
+        <label for="apellidop">Apellido Paterno:</label>
+        <input type="text" id="apellidop" name="apellidop" placeholder="Apellido paterno" required>
+
+        <label for="apellidom">Apellido Materno:</label>
+        <input type="text" id="apellidom" name="apellidom" placeholder="Apellido materno" required>
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono">
+
+        <label for="tipo_consulta">Selecciona el Tipo de Consulta:</label>
+        <select id="tipo_consulta" name="tipo_consulta" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="soporte">Soporte Técnico</option>
+            <option value="informacion">Información General</option>
+            <option value="sugerencia">Sugerencia</option>
+            <option value="otro">Otro</option>
+        </select>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí tu mensaje" rows="6" required></textarea>
+
+        <button type="submit">Enviar Mensaje</button>
+    </form>
+</div>
+    <footer>
+        <a href="#" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a><section id="redes">
+            <section id="productos" class="productos">
+                <div class="products-container">
+                    <table class="products-table">
+                        <tr>
+                            <th>Información</th>
+                            <th>Artículos</th>
+                            <th>Guías</th>
+                            <th>Soporte</th>
+                            <th>Nosotros</th>
+                        </tr>
+                        <tr>
+                            <td><a href="novedades.html">Novedades</a></td>
+                            <td><a href="welcometop.html">Ranking</a></td>
+                            <td><a href="armapc.html">Arma tu PC</a></td>
+                            <td><a href="formu.html">Formulario</a></td>
+                            <td><a href="contacto.html">Contacto</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"></a></td>
+                            <td><a href="graficorank.html"></a></td>
+                            <td><a href="recomendaciones.html">Tips</a></td>
+                            <td><a href="preguntas.html">FAQs</a></td>
+                            <td><a href="#"></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        <div class="redes">
+            <a href="https://www.youtube.com/@InnovaComputech"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://wa.me/59160400151?text=Hola,%20vi%20la%20pagina%20web%20quisiera%20asesoramiento%20en%20computadoras"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </section>
+    </footer>  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function mostrarConfirmacion(event) {
+            event.preventDefault(); // Evita el envío del formulario por defecto
+            console.log("Formulario enviado"); // Mensaje de depuración
+        
+            // Envía el formulario de forma manual con AJAX
+            const form = document.getElementById('contact-form');
+            const formData = new FormData(form);
+        
+            fetch('guardar_consulta.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(result => {
+                console.log(result); // Verifica la respuesta del servidor
+                // Si el resultado indica un error, mostrar un mensaje de error
+                if (result.includes("Error") || result.includes("fallado") || result.includes("debe ser completado")) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: result, // Muestra el mensaje de error devuelto por el servidor
+                        confirmButtonText: 'Cerrar'
+                    });
+                } else {
+                    // Muestra un modal de confirmación con SweetAlert2
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Mensaje enviado correctamente',
+                        text: 'Serás redirigido al inicio en unos momentos...',
+                        showConfirmButton: false,
+                        timer: 5000,
+                        willClose: () => {
+                            window.location.href = 'index.html'; // Cambia 'index.html' a la página de inicio deseada
+                        }
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Error al enviar el formulario:', error);
+                // Muestra un mensaje de error en caso de que la solicitud falle
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'No se pudo enviar el formulario. Intenta de nuevo más tarde.',
+                    confirmButtonText: 'Cerrar'
+                });
+            });
+        }
+        </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+    
+        // Comprobar el tamaño de la pantalla al cargar la página
+        if (window.innerWidth <= 768) {
+            // Asegurarse de que el botón hamburguesa sea visible en pantallas pequeñas
+            hamburger.style.display = 'block';
+            mobileMenu.style.display = 'block';  // Mostrar el menú móvil
+        } else {
+            // En pantallas grandes, no mostrar el menú móvil ni el botón hamburguesa
+            hamburger.style.display = 'none';
+            mobileMenu.style.display = 'none';
+        }
+    
+        // Alternar la visibilidad del menú móvil al hacer clic en el botón hamburguesa
+        hamburger.addEventListener('click', function() {
+            mobileMenu.classList.toggle('open'); // Abrir o cerrar el menú
+            document.body.classList.toggle('menu-open'); // Asegurar que el contenido no se desplace
+        });
+    
+        // Actualizar el menú si el tamaño de la ventana cambia
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                hamburger.style.display = 'none';
+                mobileMenu.style.display = 'none'; // Ocultar menú en pantallas grandes
+            } else {
+                hamburger.style.display = 'block';
+                mobileMenu.style.display = 'block';  // Mostrar menú móvil en pantallas pequeñas
+            }
+        });
+    });
+    </script>
+<script>
+  let currentIndex = 0;
+const images = document.querySelectorAll('.image-slider img');
+
+function showNextImage() {
+    images[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add('active');
+}
+
+function showPrevImage() {
+    images[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    images[currentIndex].classList.add('active');
+}
+
+document.getElementById('nextBtn').addEventListener('click', showNextImage);
+document.getElementById('prevBtn').addEventListener('click', showPrevImage);
+
+images[currentIndex].classList.add('active');  // Establecer la primera imagen como activa
+
+</script>
+
+<!-- animacion de la letra de carrussel de imagenes -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".animate-on-scroll");
+
+    const scrollHandler = () => {
+        elements.forEach((el) => {
+            const rect = el.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+            if (isVisible) {
+                el.classList.add("animate");
+            }
+        });
+    };
+
+    window.addEventListener("scroll", scrollHandler);
+    scrollHandler(); // Ejecutar al cargar la página
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+
+
+/* Sección About */
+.about {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos */
+.container h2 {
+    color: #ffd700; /* Dorado */
+    text-align: center;
+    font-size: 3em; /* Más grande */
+    margin-bottom: 30px;
+    border-bottom: 3px solid #ffd700;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container h3 {
+    color: #00ff7f; /* Verde brillante */
+    font-size: 2.2em; /* Más grande */
+    margin-top: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.container h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 70%;
+    background-color: #00ff7f;
+    border-radius: 5px;
+}
+
+/* Párrafos */
+.container p {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 1.1em; /* Más grande */
+    color: #f0f0f0; /* Blanco suave */
+}
+
+/* Lista de Valores */
+.container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container ul li {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #ffd700;
+    transition: all 0.3s ease;
+    color: #f0f0f0;
+    font-size: 1em; /* Más grande */
+}
+
+.container ul li:hover {
+    transform: translateX(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.container ul li strong {
+    color: #00ff7f;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+/* Responsividad */
+@media screen and (max-width: 1200px) {
+    .container {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        padding: 25px;
+    }
+
+    .container h2 {
+        font-size: 2.7em;
+    }
+
+    .container h3 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        padding: 20px 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .container h2 {
+        font-size: 2.5em;
+    }
+
+    .container h3 {
+        font-size: 1.8em;
+    }
+
+    .container p {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .container h2 {
+        font-size: 2.2em;
+    }
+
+    .container h3 {
+        font-size: 1.6em;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">SMART BUSSINES</a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="Disertantes.html" style="--i:0;">Disertantes</a>
+            <a href="acerca.html" style="--i:1;">Acerca de</a>
+            <a href="Galería.html" style="--i:2;">Galeria</a>
+            <a href="herramientas.html" style="--i:3;">Herramientas</a>
+        </nav>
+    </header>
+    <h1><br><br></h1>
+    <main>
+        <section class="about">
+            <div class="container">
+                <h2>Acerca de SMART BUSINESS</h2>
+                <p>Bienvenidos a <strong>SMART BUSINESS</strong>, un sitio dedicado a conectar a emprendedores y empresas con soluciones innovadoras para hacer crecer sus negocios. Nuestro objetivo es proporcionar información valiosa, acceso a servicios especializados en diversas industrias, desde la tecnología hasta la salud y el bienestar.</p>
+        
+                <h3>Nuestros Misión</h3>
+                <ul>
+                    <li><strong>Innovación:</strong> Siempre estamos a la vanguardia de las últimas tendencias y tecnologías para ofrecerte lo mejor.</li>
+                    <li><strong>Confianza:</strong> Construimos relaciones a largo plazo con nuestros usuarios y partners basadas en la transparencia y el compromiso.</li>
+                    <li><strong>Compromiso:</strong> Nos dedicamos a ofrecer un excelente servicio y asegurar el éxito de cada cliente que confía en nosotros.</li>
+                    <li><strong>Bienestar:</strong> Creemos que un negocio exitoso empieza con una vida saludable y equilibrada.</li>
+                </ul>
+        
+                <h3>¿Por qué elegirnos?</h3>
+                <p>SMART BUSINESS no es solo un sitio más de recursos; es una comunidad de emprendedores y profesionales que comparten el mismo interés en mejorar y crecer. Ofrecemos un catálogo cuidadosamente seleccionado de productos, servicios y soluciones, todo pensado para maximizar tu productividad y bienestar. Ya seas un pequeño empresario que busca expandir su presencia online o un profesional que necesita optimizar su espacio de trabajo, SMART BUSINESS está aquí para ayudarte.</p>
+    
+        </section>
+        
+    </main>
+</body>
+</html>

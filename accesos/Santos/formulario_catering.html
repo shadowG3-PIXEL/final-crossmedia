@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Catering - George's Food</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Fondo gris claro */
+        }
+
+        .catering-container {
+            background-color: #f9fdfd; /* Fondo amarillo */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .btn-navy {
+            background-color: #001f3f; /* Azul marino */
+            color: white; /* Color del texto */
+        }
+
+        .btn-navy:hover {
+            background-color: #003366; /* Un tono más claro para el efecto hover */
+            color: white;
+        }
+
+        h1, label, input, select {
+            color: #212529; /* Color del texto */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="catering-container">
+        <h1 class="text-center">Solicitar Catering</h1>
+
+        <form action="procesar_catering.php" method="POST">
+            <!-- Tipo de evento -->
+            <div class="form-group">
+                <label for="tipo_evento">Tipo de evento:</label>
+                <select class="form-control" id="tipo_evento" name="tipo_evento">
+                    <option value="Boda">Boda</option>
+                    <option value="Fiesta">Fiesta</option>
+                    <option value="Evento Corporativo">Evento Corporativo</option>
+                    <option value="Reunión Familiar">Reunión Familiar</option>
+                </select>
+            </div>
+
+            <!-- Número de personas -->
+            <div class="form-group">
+                <label for="num_personas">Número de personas:</label>
+                <input type="number" class="form-control" id="num_personas" name="num_personas" value="10" min="10" required>
+            </div>
+
+            <!-- Menú -->
+            <div class="form-group">
+                <label for="menu">Selecciona el menú:</label>
+                <select class="form-control" id="menu" name="menu">
+                    <option value="Buffet Clásico">Buffet Clásico</option>
+                    <option value="Buffet Gourmet">Buffet Gourmet</option>
+                    <option value="Menú Saludable">Menú Saludable</option>
+                    <option value="Menú Internacional">Menú Internacional</option>
+                </select>
+            </div>
+
+            <!-- Fecha del evento -->
+            <div class="form-group">
+                <label for="fecha_evento">Fecha del evento:</label>
+                <input type="date" class="form-control" id="fecha_evento" name="fecha_evento" required>
+            </div>
+
+            <!-- Método de pago -->
+            <div class="form-group">
+                <label for="metodo_pago">Método de pago:</label>
+                <select class="form-control" id="metodo_pago" name="metodo_pago" required>
+                    <option value="Tarjeta de Crédito">Tarjeta de Crédito</option>
+                    <option value="Transferencia Bancaria">Transferencia Bancaria</option>
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="PayPal">PayPal</option>
+                </select>
+            </div>
+
+            <!-- Información de contacto -->
+            <h3 class="my-4">Información de Contacto</h3>
+            <div class="form-group">
+                <label for="nombre">Nombre y apellido:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" required>
+            </div>
+
+            <!-- Enviar Solicitud -->
+            <a href="https://wa.me/59160406573" class="btn btn-success" style="display: inline-flex; align-items: center; justify-content: center; padding: 10px 20px; border-radius: 8px; background-color: #d35c25; border: none; text-decoration: none;">
+                <img src="imagenes/watsat.png" style="width: 25px; height: 25px; margin-right: 10px;">
+                Solicitar
+            </a>
+                    </form>
+
+       
+
+    <!-- Modal para éxito -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Solicitud Exitosa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Tu solicitud de catering ha sido registrada exitosamente.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            // Mostrar modal si se pasó el parámetro 'success' en la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('success')) {
+                $('#successModal').modal('show');
+            }
+        });
+    </script>
+</body>
+</html>
+
+

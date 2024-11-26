@@ -1,0 +1,146 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to top, rgba(23, 42, 58, 0.8), rgba(34, 53, 77, 1)), url(https://res.cloudinary.com/dx80kll1o/image/upload/v1732074595/gaming2_eqpzgk.jpg);
+    margin: 0;
+    padding: 0;
+    padding-top: 30px; /* Añadir espacio desde la parte superior de la página */
+}
+
+
+
+
+.container {
+    max-width: 700px;
+    max-height: 1200px;
+    margin: 80px auto; /* Incrementar margen superior */
+    padding: 20px;
+    background: linear-gradient(to left, #a758df, #f8b8b3);
+    border: 4px solid; /* Ancho del borde */
+    border-image-source: linear-gradient(270deg, #ff0000, #00ffcc, #0066ff, #ff00ff); /* Gradiente del borde */
+    border-image-slice: 1;
+    animation: border-move 4s linear infinite; /* Animación */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.6); /* Brillo adicional */
+}
+h1 {
+    text-align: center;
+    color: #050000;
+    font-size: 4.5em !important;/* Aumentar el tamaño de la fuente */
+}
+
+
+p {
+    color: #020000;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+    color: #020000;
+    font-size: 0.9em; /* Reducir el tamaño de la fuente en las etiquetas */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px; /* Ajustar el padding */
+    margin: 10px 0;
+    border: 1px solid #030000;
+    border-radius: 4px;
+    font-size: 0.9em; /* Reducir el tamaño de la fuente en los campos de entrada */
+    max-width: 100%; /* Ajusta el ancho para evitar desbordamiento */
+}
+
+#contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em; /* Reducir el tamaño de la fuente en el botón */
+    margin: 10px 0; /* Asegura espaciado con otros elementos */
+}
+
+#contact-form button:hover {
+    background-color: #218838;
+}
+
+.checkbox-container {
+    margin: 10px 0;
+}
+
+.checkbox-container label {
+    display: inline;
+    font-size: 14px;
+    color: #000000;
+}
+
+input, select, textarea {
+    margin-top: 4px; /* Espacio entre el label y el input/textarea */
+}
+
+/* Estilo para el placeholder */
+input::placeholder,
+textarea::placeholder {
+    font-size: 0.8em; /* Hacer más pequeño el texto del placeholder */
+    color: #888; /* Cambiar el color del placeholder si lo deseas */
+}
+
+/* Ajustar el estilo del select */
+select {
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    padding: 8px; /* Aumentar el espacio interior */
+    font-size: 0.9em; /* Aumenta el tamaño de la fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Bordes grises */
+    background-color: #f8f9fa; /* Fondo claro */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+/* Estilo del texto dentro del select */
+select:focus {
+    border-color: #0071c5; /* Cambia el color del borde cuando el campo está enfocado */
+    outline: none; /* Elimina el borde predeterminado del navegador */
+}
+
+/* Opciones del select */
+option {
+    padding: 10px;
+    font-size: 0.9em; /* Tamaño de texto dentro de las opciones */
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        margin: 60px auto; /* Incrementar margen superior en tablets */
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2.5em !important; /* Reducir tamaño del título en pantallas pequeñas */
+        margin-top: 10px; /* Espacio entre la parte superior y el título */
+        margin-bottom: 15px; /* Espacio inferior */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 95%; /* Ajustar el ancho del formulario */
+        margin: 50px auto; /* Ajustar margen superior en teléfonos */
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em !important; /* Ajustar aún más el tamaño del título */
+        margin-top: 10px; /* Mantén un espacio mínimo para que no suba demasiado */
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Collage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+  /* Contenedor de la galería */
+#galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Configura las columnas de la galería */
+    gap: 20px; /* Espacio entre las imágenes */
+    margin-top: 50px;
+    padding: 20px;
+    overflow: hidden; /* Para que las imágenes que sobresalgan no sean visibles */
+}
+
+/* Estilo para cada imagen en la galería */
+.imagen {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Efecto hover para que las imágenes se resalten al pasar el mouse */
+.imagen:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el título de la galería */
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Medias Queries para mejorar la responsividad */
+
+/* Pantallas pequeñas (por ejemplo, móviles) */
+@media (max-width: 767px) {
+    #galeria {
+        grid-template-columns: 1fr; /* Solo una columna en pantallas pequeñas */
+        gap: 15px;
+    }
+
+    h2 {
+        font-size: 2em; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
+}
+
+/* Pantallas medianas (tablets, etc.) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #galeria {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Dos o tres columnas */
+        gap: 20px;
+    }
+
+    h2 {
+        font-size: 2.3em;
+        margin-bottom: 30px;
+    }
+}
+
+/* Pantallas grandes (por ejemplo, escritorios) */
+@media (min-width: 1025px) {
+    #galeria {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Deja más espacio si es necesario */
+        gap: 20px;
+    }
+
+    h2 {
+        font-size: 2.5em;
+        margin-bottom: 40px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="/index.html" class="logo">SMART BUSSINES</a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="Disertantes.html" style="--i:0;">Disertantes</a>
+            <a href="acerca.html" style="--i:1;">Acerca de</a>
+            <a href="Galería.html" style="--i:2;">Galeria</a>
+            <a href="herramientas.html" style="--i:3;">Herramientas</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Galería de Eventos - Collage</h2>
+        <div id="galeria">
+            <!-- 10 imágenes dispuestas en forma de collage -->
+            <div class="imagen">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7O0z3BIcLcP7B3pVY-3N-oEoPLYEHN7kB3A&s" alt="Evento 1">
+            </div>
+            <div class="imagen">
+                <img src="https://images.indianexpress.com/2024/03/processed-food.jpg?w=414" alt="Evento 2">
+            </div>
+            <div class="imagen">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRzGvbRMoifBZgIBHfZa-5yl8klvMlV1x5vw&s" alt="Evento 3">
+            </div>
+            <div class="imagen">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRzGvbRMoifBZgIBHfZa-5yl8klvMlV1x5vw&s" alt="Evento 4">
+            </div>
+            <div class="imagen">
+                <img src="evento5.jpg" alt="Evento 5">
+            </div>
+            <div class="imagen">
+                <img src="evento6.jpg" alt="Evento 6">
+            </div>
+            <div class="imagen">
+                <img src="evento7.jpg" alt="Evento 7">
+            </div>
+            <div class="imagen">
+                <img src="evento8.jpg" alt="Evento 8">
+            </div>
+            <div class="imagen">
+                <img src="evento9.jpg" alt="Evento 9">
+            </div>
+            <div class="imagen">
+                <img src="evento10.jpg" alt="Evento 10">
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC TECH - Contacto</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/63040c5298.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="/index.html"><img src="https://res.cloudinary.com/dum4okaqx/image/upload/v1732220316/LOGO2_dclip5.png" alt="PC TECH Logo"></a>
+                    <h1>PC TECH</h1>
+                </div>
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="services.html">Servicios</a></li>
+                    <li><a href="advertisements.html">Promociones</a></li>
+                    <li><a href="about.html">Nosotros</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <!-- <li><a href="admin_login.php" class="login-icon"><i class="fa-solid fa-user"></i></a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>Agenda tu Cita</h2>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <div class="container">
+                <form id="form">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" placeholder="Juan Perez Guzman" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="Email" name="Email" placeholder="juan@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" placeholder="Escribe tu mensaje aqui..."
+                            required></textarea>
+                    </div>
+                    <input type="submit" id="button" class="submit-btn" value="Enviar">
+                </form>
+                <script type="text/javascript"
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+                <script type="text/javascript">
+                    emailjs.init('oQeOOmvJ5HZCHkBqf')
+                </script>
+            </div>
+        </section>
+        <hr>
+        <section class="contact-info">
+            <div class="container">
+                <h3>Información de Contacto</h3>
+                <p><i class="icon-map-marker"></i> Dirección: Calle Bolivar 123, Oruro</p>
+                <p><i class="icon-phone"></i> Teléfono: (591) 75423685</p>
+                <p><i class="icon-envelope"></i> Email: info@pctech.com</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 PC TECH - Todos los derechos reservados</p>
+            <!-- <ul class="social-links">
+                <li><a href="#" class="icon-facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#" class="icon-twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" class="icon-instagram"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul> -->
+        </div>
+    </footer>
+
+    <script>
+        //menu hamburguesa
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector("nav ul");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        // Cerrar el menú cuando se hace clic en un enlace
+        document.querySelectorAll("nav ul li a").forEach((link) => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            });
+        });
+        //correo
+        const btn = document.getElementById("button");
+        const name = document.getElementById("name");
+        const email = document.getElementById("Email");
+        const message = document.getElementById("message");
+
+        document.getElementById("form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            btn.value = "Enviando...";
+
+            const serviceID = "default_service";
+            const templateID = "template_il16ssw";
+
+            emailjs.sendForm(serviceID, templateID, this).then(
+                () => {
+                    btn.value = "Enviar";
+                    alert("¡Gracias por tu mensaje!");
+                    name.value = "";
+                    email.value = "";
+                    message.value = "";
+                },
+                (err) => {
+                    btn.value = "Enviar";
+                    alert(JSON.stringify(err));
+                }
+            );
+        });
+    </script>
+</body>
+
+</html>

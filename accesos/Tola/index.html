@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+    <title>THE GYM</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow" style="background: url('gym-bg.jpg') no-repeat center center; background-size: cover;">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white fw-bold" href="/index.html">
+                <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732501141/POL1_itssgy.jpg" alt="Logo del gimnasio O'live GYM" width="50" height="50" class="rounded-circle me-2">
+                O'live GYM
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio" onclick="seleccionar()">
+                            <ion-icon name="home-outline" class="me-2"></ion-icon>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nosotros" onclick="seleccionar()">
+                            <ion-icon name="location-outline" class="me-2"></ion-icon>Dirección
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios" onclick="seleccionar()">
+                            <ion-icon name="hammer-outline" class="me-2"></ion-icon>Servicios
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#planes" onclick="seleccionar()">
+                            <ion-icon name="cash-outline" class="me-2"></ion-icon>Nuestros Planes
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comodidades" onclick="seleccionar()">
+                            <ion-icon name="barbell-outline" class="me-2"></ion-icon>Comodidades
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonios" onclick="seleccionar()">
+                            <ion-icon name="chatbubble-ellipses-outline" class="me-2"></ion-icon>Testimonios
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto" onclick="seleccionar()">
+                            <ion-icon name="mail-outline" class="me-2"></ion-icon>Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <section id="inicio" class="inicio">
+        <div class="contenido-seccion">
+            <div class="info">
+                <h2>SI DUELE,<span class="txtRojo">ESTÁ FUNCIONANDO.</span></h2>
+                <p>Transforma tu cuerpo, transforma tu vida</p>
+                <a href="#nosotros" class="btn-mas">
+                    <i class="fa-solid fa-circle-chevron-down"></i>
+                </a>
+            </div>
+            <div class="opciones">
+                <div class="opcion">
+                    01.FITNESS
+                </div>
+                <div class="opcion">
+                    02.ZUMBA
+                </div>
+                <div class="opcion">
+                    03.BOXING
+                </div>
+                <div class="opcion">
+                    04.CARDIO
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="nosotros" class="nosotros">
+        <div class="fila">
+            <div class="col">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3795.8051311199774!2d-67.10044017780105!3d-17.941240705301713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e2bb9bc56a420f%3A0x96ced21f7b0057a2!2sGimnasio%20O&#39;%20Live!5e0!3m2!1ses!2sbo!4v1731726408521!5m2!1ses!2sbo" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="col">
+                <div class="contenedor-titulo">
+                    <div class="numero">
+                        01
+                    </div>
+                    <div class="info">
+                        <span class="frase">LA MEJOR EXPERIENCIA</span>
+                        <h2>LA ENCUENTRAS EN ESTA DIRECCIÓN.</h2>
+                    </div>
+                </div>
+                <p class="p-especial">Salida Cochabamba, Urb. Huajara 3, Av. del Valle</p>
+                <p>Puedes llegar en transporte público con los siguientes números “…” Nos encontramos al pasar la rotonda a tres cuadras de la salida a Cochabamba.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="fila-nosotros">
+            <div class="col1">
+                <span class="frase">
+                    <span class="txtRojo">ENTRENA</span> DIFERENTE
+                </span>
+                <h2>ENTRENA <span class="txtRojo">HOY</span> POR 12 Bs LA PRIMERA SESIÓN.</h2>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="servicios" id="servicios">
+        <div class="contenido-seccion">
+            <div class="fila">
+                <div class="col">
+                    <div class="contenedor-titulo">
+                        <div class="numero">
+                            02
+                        </div>
+                        <div class="info">
+                            <span class="frase">TE DAMOS LOS MEJORES.</span>
+                            <h2>SERVICIOS</h2>
+                        </div>
+                    </div>
+                    <p class="p-especial">Respecto a máquinas de tren superior , inferior y cardio contamos con entrenadores calificados que se encuentran todo el dia a disposición del cliente y ofrecemos clases de zumba  </p>
+                </div>
+                <div class="col">
+                    <body>
+                        <video width="640" height="360" controls>
+                            <source src="https://res.cloudinary.com/dcquncwoz/video/upload/lil_jodgc4.mp4" type="video/mp4">
+                            <source src="ruta-del-video.ogg" type="video/ogg">
+                        </video>
+                    </body>
+                </div>
+            </div>
+        </div>
+        <div class="info-servicios">
+            <table>
+                <tr>
+                    <td>
+                        <i class="fa-solid fa-dumbbell"></i>
+                        <h3><span class="txtRojo">Clases </span> de Fitness</h3>
+                        <p>LUNES A VIERNES 9:AM A 10:30PM LOS SABADO 9:30 A 12:00
+                        </p>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-heart-circle-bolt"></i>
+                        <h3><span class="txtRojo">Clases </span> de Cardio</h3>
+                        <p>LUNES A VIERNES 9:00 AM A 10:30 LOS SABADO 9:30 A 12:00 </p>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-mitten"></i>
+                        <h3><span class="txtRojo">Clases </span> de BOXING</h3>
+                        <p>LOS FINES DE SEMANA 9:AM A 18:PM</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+
+    <section id="planes" class="planes">
+        <div class="numero">
+            03
+        </div>
+        <h2>NUESTROS PLANES</h2>
+        <div class="contenedor-planes">
+         
+            <div class="plan">
+                <h3>Plan Zumba</h3>
+                <p>Accede a clases de Zumba.</p>
+                <p><strong>Precio:</strong> 100 Bs</p>
+                <ul>
+                    <li>Acceso exclusivo a clases de Zumba</li>
+                    <li>Sesiones ilimitadas durante el mes</li>
+                </ul>
+                <a href="https://wa.me/59176150205?text=Hola,%20me%20interesa%20el%20plan%20mensual.%20Quiero%20saber%20más." target="_blank">
+                    <button>Elegir Plan</button>
+                </a>
+                
+                
+            </div>
+    
+            <div class="plan">
+                <h3>Plan Musculación + Zumba</h3>
+                <p>Accede a las instalaciones para musculación y clases de Zumba.</p>
+                <p><strong>Precio:</strong> 180 Bs/mes</p>
+                <ul>
+                    <li>Acceso completo a instalaciones de musculación</li>
+                    <li>Acceso exclusivo a clases de Zumba</li>
+                    <li>Sesiones de lunes a viernes</li>
+                </ul>
+                <a href="https://wa.me/59176150205?text=¡Hola!%20Me%20interesa%20el%20Plan%20Musculación%20+%20Zumba%20y%20quisiera%20conocer%20más%20sobre%20los%20beneficios%20y%20condiciones.%20¿Podrían%20darme%20más%20información?" target="_blank">
+                    <button>Elegir Plan</button>
+                </a>
+            </div>
+    
+            <div class="plan">
+                <h3>Plan Musculación + Zumba (Anual)</h3>
+                <p>Ahorra con nuestro plan anual de musculación y Zumba.</p>
+                <p><strong>Precio:</strong> 1800 Bs/año</p>
+                <ul>
+                    <li>Acceso completo a instalaciones de musculación durante todo el año</li>
+                    <li>Acceso exclusivo a clases de Zumba</li>
+                    <li>Sesiones de lunes a viernes</li>
+                    <li>Descuentos especiales en productos y servicios</li>
+                </ul>
+                <a href="https://wa.me/59176150205?text=¡Hola!%20Me%20interesa%20el%20Plan%20Musculación%20+%20Zumba%20(Anual).%20Me%20gustaría%20saber%20más%20detalles%20sobre%20este%20plan.%20¿Podrían%20ayudarme%20con%20información%20adicional?" target="_blank">
+                    <button>Elegir Plan</button>
+                </a>
+            </div>
+    
+            <div class="plan">
+                <h3>Plan Anual</h3>
+                <p>Ahorra más con nuestro plan de 12 meses.</p>
+                <p><strong>Precio:</strong> 1450 Bs/año</p>
+                <ul>
+                    <li>Acceso completo a instalaciones de musculacion</li>
+                    <li>Entrenamiento libre</li>
+                    <li>Clases grupales y exclusivas</li>
+                    <li>Descuentos en productos y servicios</li>
+                </ul>
+                <a href="https://wa.me/59176150205?text=¡Hola!%20Estoy%20interesado%20en%20el%20Plan%20Anual%20y%20quisiera%20conocer%20más%20detalles%20sobre%20lo%20que%20incluye.%20¿Podrían%20proporcionarme%20información%20adicional?" target="_blank">
+                    <button>Elegir Plan</button>
+                </a>
+            </div>
+    
+            <div class="plan">
+                <h3>Plan Medio Año</h3>
+                <p>Accede a todas las instalaciones de musculacion por 6 meses.</p>
+                <p><strong>Precio:</strong> 750 Bs/6 meses</p>
+                <ul>
+                    <li>Acceso completo a instalaciones de musculacion</li>
+                    <li>Entrenamiento libre</li>
+                    <li>Clases grupales incluidas</li>
+                    <li>Descuentos en productos y servicios</li>
+                </ul>
+                <a href="https://wa.me/59176150205?text=¡Hola!%20Me%20interesa%20el%20Plan%20Medio%20Año%20y%20quiero%20saber%20más%20sobre%20este.%20¿Podrían%20proporcionarme%20más%20detalles,%20por%20favor?" target="_blank">
+                    <button>Elegir Plan</button>
+                </a>
+            </div>
+
+            <div class="plan">
+                <h3>Plan Mensual</h3>
+                <p>Disfruta de acceso completo a instalaciones de musculacion por un mes.</p>
+                <p><strong>Precio:</strong> 140 Bs/mes</p>
+                <ul>
+                    <li>Acceso completo a instalaciones de musculacion</li>
+                    <li>Entrenamiento libre</li>
+                    <li>Acceso a clases grupales</li>
+                </ul>
+                <a href="https://wa.me/59176150205?text=¡Hola!%20Me%20interesa%20el%20Plan%20Mensual%20y%20quisiera%20conocer%20más%20sobre%20los%20servicios%20que%20ofrece.%20¿Podrían%20proporcionarme%20más%20información?" target="_blank">
+                    <button>Elegir Plan</button>
+                </a>
+            </div>
+   
+            <div class="plan">
+                <h3>Plan Trimestral</h3>
+                <p>Accede a todas las instalaciones de musculacion por 3 meses.</p>
+                <p><strong>Precio:</strong> 390 Bs/3 meses</p>
+                <ul>
+                    <li>Acceso completo a instalaciones de musculacion</li>
+                    <li>Clases grupales ilimitadas</li>
+                    <li>Asesoramiento personalizado</li>
+                </ul>
+                <a href="https://wa.me/59176150205?text=¡Hola!%20Estoy%20interesado%20en%20el%20Plan%20Trimestral%20y%20quisiera%20saber%20más%20detalles%20sobre%20los%20beneficios.%20¿Podrían%20ayudarme%20con%20esta%20información?" target="_blank">
+                    <button>Elegir Plan</button>
+                </a>
+            </div>
+
+            <div class="plan">
+                <h3>Plan Medio Mes</h3>
+                <p>Accede a todas las instalaciones de musculacion por 15 días. distribuidas por un mes</p>
+                <p><strong>Precio:</strong> 85 Bs/medio mes</p>
+                <ul>
+                    <li>Acceso completo a instalaciones a instalaciones de musculacion</li>
+                    <li>Entrenamiento libre</li>
+                    <li>Clases grupales disponibles</li>
+                </ul>
+                <a href="https://wa.me/59176150205?text=¡Hola!%20Me%20interesa%20el%20Plan%20Medio%20Mes%20y%20quisiera%20obtener%20más%20información%20sobre%20las%20condiciones%20y%20beneficios.%20¿Podrían%20proporcionarme%20los%20detalles?" target="_blank">
+                    <button>Elegir Plan</button>
+                </a>
+            </div>
+    
+        </div>
+    </section>    
+    
+    <section id="comodidades" class="comodidades">
+                    <div class="titulo-com mb-5">
+                        <div class="numero">
+                            04
+                        </div>
+                        <div>
+                            <span>TE DAMOS LAS MEJORES</span>
+                            <h2>COMODIDADES</h2>
+                        </div>
+                       <b><p>Para tu desarrollo personal te ofrecemos todo tipo de equipos.</p></b>
+                    </div>
+                    <div class="maquinas">
+                     <ul>
+                        <li><span>Máquinas de Tren Superior:</span> Máquina de press de pecho, Máquina de remo sentado, Máquina de pull-over, Máquina de triceps, Máquina de biceps, Máquina de press de hombros, Máquina de pájaros, Máquina de pull-down, Máquina de triceps en cuerda, Máquina de abdominales, Máquina de peck deck.</li>
+                        <li><span>Máquinas de Tren Inferior:</span> Máquina de press de pierna, Máquina de extensión de piernas, Máquina de flexión de piernas, Máquina de abductores, Máquina de aductores, Máquina de glúteos, Máquina de sentadillas, Máquina de pantorrillas, Máquina de zancadas.</li>
+                        <li><span>Máquinas de Cardio:</span> Cinta de correr (Treadmill), Bicicleta estática (Stationary Bike), Elíptica (Elliptical Trainer).</li>
+                     </ul>
+                    </div>
+                    <div class="carousel-container">
+                        <div class="carousel">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498517/a1_tdb1ge.jpg" alt="Máquina de Tren Superior" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498523/a2_dqk2wy.jpg" alt="Máquina de Cardio" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498527/a3_s9la1g.jpg" alt="Máquina de Tren Inferior" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498528/a4_meaho2.jpg" alt="Ejercicio de Cardio" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498529/a5_qjacdp.jpg" alt="Entrenamiento en gimnasio" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498529/a6_br6yjj.jpg" alt="Máquinas de musculación" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498530/a7_j4awbe.jpg" alt="Área de entrenamiento" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498531/a8_mzjuoq.jpg" alt="Equipamiento de gimnasio" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498531/a9_txekgu.jpg" alt="Zona de cardio" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498517/a10_hegkgg.jpg" alt="Zona de musculación" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498518/a11_xxubyo.jpg" alt="Ejercicio en gimnasio" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498518/a12_fbgmfg.jpg" alt="Máquina de pesas" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498518/a13_zuh4qg.jpg" alt="Entrenador personal" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498519/a14_cwh0ki.jpg" alt="Gimnasio bien equipado" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498520/a15_mwx9td.jpg" alt="Ejercicios en el gimnasio" width="300">
+                    
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498517/a1_tdb1ge.jpg" alt="Máquina de Tren Superior" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498523/a2_dqk2wy.jpg" alt="Máquina de Cardio" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498527/a3_s9la1g.jpg" alt="Máquina de Tren Inferior" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498528/a4_meaho2.jpg" alt="Ejercicio de Cardio" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498529/a5_qjacdp.jpg" alt="Entrenamiento en gimnasio" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498529/a6_br6yjj.jpg" alt="Máquinas de musculación" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498530/a7_j4awbe.jpg" alt="Área de entrenamiento" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498531/a8_mzjuoq.jpg" alt="Equipamiento de gimnasio" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498531/a9_txekgu.jpg" alt="Zona de cardio" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498517/a10_hegkgg.jpg" alt="Zona de musculación" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498518/a11_xxubyo.jpg" alt="Ejercicio en gimnasio" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498518/a12_fbgmfg.jpg" alt="Máquina de pesas" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498518/a13_zuh4qg.jpg" alt="Entrenador personal" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498519/a14_cwh0ki.jpg" alt="Gimnasio bien equipado" width="300">
+                            <img src="https://res.cloudinary.com/dcquncwoz/image/upload/v1732498520/a15_mwx9td.jpg" alt="Ejercicios en el gimnasio" width="300">
+                        </div>
+                    </div>
+                    
+    </section>
+    
+    
+    
+    
+    <section id="testimonios" class="testimonios">
+        <div class="contenido-seccion">
+            <div class="contenedor-titulo">
+                <div class="numero">
+                    05
+                </div>
+                <div class="info">
+                    <span class="frase">Lo que dicen nuestros miembros</span>
+                    <h2>Testimonios</h2>
+                </div>
+            </div>
+            <div class="testimonios-contenedor">
+                <div class="testimonio">
+                    <p>"Desde que me uní a el GYM, he logrado alcanzar mis metas de fitness y salud. Los entrenadores son muy profesionales y siempre están disponibles para ayudarme." - <strong>Juan Pérez</strong></p>
+                </div>
+                <div class="testimonio">
+                    <p>"Las clases de Zumba son geniales. Me divierto mucho mientras hago ejercicio. ¡El ambiente es increíble!" - <strong>Ana Gómez</strong></p>
+                </div>
+                <div class="testimonio">
+                    <p>"He probado muchas rutinas de entrenamiento, pero en el GYM encontré el enfoque perfecto para mis objetivos. ¡Totalmente recomendado!" - <strong>Pedro Ruiz</strong></p>
+                </div>
+                <div class="testimonio">
+                    <p>"Me siento mucho más saludable y en forma desde que comencé a entrenar en el GYM. El equipo de profesionales me ha ayudado a mejorar mi rendimiento." - <strong>Laura Martínez</strong></p>
+                </div>
+                <div class="testimonio">
+                    <p>"Las instalaciones son modernas y siempre limpias. Me siento muy cómodo entrenando aquí y he visto grandes resultados." - <strong>Carlos Fernández</strong></p>
+                </div>
+                <div class="testimonio">
+                    <p>"Me encanta la variedad de entrenamientos disponibles. Siempre encuentro algo nuevo que probar, lo que me mantiene motivado." - <strong>María López</strong></p>
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+        <div class="contenido-seccion">
+            <div class="contenedor-titulo">
+                <div class="numero">
+                    06
+                </div>
+                <div class="info">
+                    <span class="frase">LA MEJOR EXPERIENCIA</span>
+                    <h2>CONTACTOS</h2>
+                </div>
+            </div>
+
+            <div class="fila-datos">
+                <div class="col">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Salida Cochabamba, Urb. Huajara 3, Av. del Valle
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-phone"></i>
+                    76150205
+                </div>
+                <div class="col">
+                    <i class="fa-regular fa-clock"></i>
+                    Lunes a Sabado, 9:00 am a 22:00 pm Domingos de 8:00 am a 13:00pm
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+
+    <footer>
+        <div class="info">
+            <p>2024 - <span class="txtRojo">O'LIVE GYM</span> Todos los derechos reservados (DESARROLLADO POR ONIL VALDEZ Y JOSUE TOLA)</p>
+            <div class="redes">
+                <a href="https://www.facebook.com/share/aRyhFeY8QdQXPQ7f/">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://chat.whatsapp.com/IVPbgSHdmZAJFUiCq729zQ">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://www.tiktok.com/@olive.gym?_t=8rMmgtH852u&_r=1">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

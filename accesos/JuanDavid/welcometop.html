@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovaciones en Tecnología de PC</title>
+    <link rel="stylesheet" href="cssprinci.css">  
+    <link rel="stylesheet" href="rank.css">
+    <link rel="stylesheet" href="graficorak.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+<body>
+    <section id="navegacion" class="navegacion">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/index.html" class="logo-texto">
+                    InnovaCompuTech
+                </a>
+                    
+            </div>
+            <div class="nombrelogo">
+            </div>
+            <!-- Menú principal -->
+            <ul class="menu">
+                <li><a style="font-size: 25px; font-weight: 700;" href="index.html"><i>Inicio</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="novedades.html"><i>Novedades</i></a></li>
+                <li>
+                    <a style="font-size: 25px; font-weight: 700;" href="welcometop.html"><i>Ranking</i></a>
+                </li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="armapc.html"><i>Arma tu pc</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="contacto.html"><i>Contacto</i></a></li>
+            </ul>
+            
+            <!-- Botón hamburguesa -->
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+        </nav>
+    
+        <!-- Menú desplegable en móvil -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="welcometop.html">Ranking</a></li>
+                <li><a href="armapc.html">Arma tu pc</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </section>
+<section id="table" class="table">
+    <div class="content">
+        <h2>Ranking de Componentes Calidad Precio</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Procesadores</th>
+                    <th>Tarjetas Gráficas</th>
+                    <th>Laptos Gamers</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#content2">Intel</a></td>
+                    <td><a href="#content3">NVIDIA</a></td>
+                    <td><a href="#content5">Gamers</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#content1">AMD</a></td>
+                    <td><a href="#content4">RADEON</a></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>  
+</section> 
+
+<section id="content1">
+    <div class="content">
+        <h1 class="titulo-amd">Top Procesadores AMD</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Modelo</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452856/ryzen-5-5500_udmgth.jpg" height="200" width="200"></td>
+                    <td>AMD Ryzen 5 5500</td>
+                    <td>650 Bs.</td>
+                </tr>
+                <tr>
+                    <td><img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452856/ryzen-7-5700x_ht58qv.jpg" height="200" width="200"></td>
+                    <td>AMD Ryzen 7 5700X</td>
+                    <td>1360 Bs.</td>
+                </tr>
+                <tr>
+                    <td><img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452854/ryzen-7-5700x3d_vg0g9b.jpg" height="200" width="200"></td>
+                    <td>AMD Ryzen 7 5700X3D</td>
+                    <td>1700 Bs.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>   
+</section>
+
+<section id="content2">
+    <div class="content">
+        <h1 class="titulo-intel">Top Procesadores Intel</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Modelo</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452855/i3-12100F_l92xid.jpg" height="200" width="200"></td>
+                    <td>Intel Core i3-12100F</td>
+                    <td>680 Bs.</td>
+                </tr>
+                <tr>
+                    <td><img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452855/i5_12400F_nmfxvc.jpg" height="200" width="200"></td>
+                    <td>Intel Core i5-12400F</td>
+                    <td>880 Bs.</td>
+                </tr>
+                <tr>
+                    <td><img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452855/I5-13600KF_ean3t5.jpg" height="200" width="200"></td>
+                    <td>Intel Core i5-13600KF</td>
+                    <td>1280 Bs.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>  
+</section>
+
+<section id="content3">
+    <div class="content">
+        <h1 class="titulo-nvidia">Top Tarjetas Gráficas Nvidia</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Modelo</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452854/RTX_4070RTX_jbmyvi.jpg" height="200" width="200"></td>
+                    <td>ASUS Dual GeForce RTX 4060</td>
+                    <td>2420 Bs.</td>
+                </tr>
+                <tr>
+                    <td><img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452854/RTX_4060TI_qcvlmg.jpg" height="200" width="200"></td>
+                    <td>Tarjeta Gráfica Asus Dual GeForce RTX 4060 Ti</td>
+                    <td>3480 Bs.</td>
+                </tr>
+                <tr>
+                    <td><img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452854/rtx-4060_tyypzv.jpg" height="200" width="200"></td>
+                    <td>Tarjeta Gráfica Asus Dual GeForce RTX 4070</td>
+                    <td>4020 Bs.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>  
+</section>
+<section id="content4">
+    <div class="content">
+        <h1 class="titulo-radeon">Top Tarjetas Gráficas Radeon</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Modelo</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452855/RX_6600_kb7cr4.jpg" height="200" width="200"></td>
+                    <td>Tarjeta Gráfica PowerColor AMD Radeon RX 6600</td>
+                    <td>1585 Bs.</td>
+                </tr>
+                <tr>
+                    <td><img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452854/RX_7700XT_wauvwp.jpg" height="200" width="200"></td>
+                    <td>Tarjeta Gráfica PowerColor AMD Radeon RX 7700 XT</td>
+                    <td>3400 Bs.</td>
+                </tr>
+                <tr>
+                    <td><img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452855/RX_7800XT_fhc4ew.jpg" height="200" width="200"></td>
+                    <td>Tarjeta Gráfica PowerColor AMD Radeon RX 7800 XT</td>
+                    <td>4220 Bs.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>   
+</section>
+
+<section id="content5">
+    <div class="content">
+        <h1 class="titulo-laptop">Top Laptops Gamer</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Modelo</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452855/HP_VICTUS_16_rwhkrt.jpg" height="200" width="200"></td>
+                    <td>HP VICTUS 16</td>
+                    <td>12000 Bs.</td>
+                </tr>
+                <tr>
+                    <td><img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452855/ASUS_TUF_A15_tsfwtd.jpg" height="200" width="200"></td>
+                    <td>ASUS TUF Gaming A15</td>
+                    <td>13500 Bs.</td>
+                </tr>
+                <tr>
+                    <td><img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452856/Lenovo_LOQ_15_noqfwk.jpg" height="200" width="200"></td>
+                    <td>Lenovo LOQ 15</td>
+                    <td>10500 Bs.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>   
+</section>
+
+<section>
+    <div class="content">
+        <div class="container">
+            <h1>Ranking de procesadores</h1>
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="container">
+            <h1>Ranking de Gráficas</h1>
+            <canvas id="myChart1"></canvas>
+        </div>
+        <div class="container">
+            <h1>Ranking de Laptops</h1>
+            <canvas id="myChart2"></canvas>
+        </div>
+    </div>  
+   
+</section>  
+</body>
+<footer>
+    <a href="#" class="arriba">
+        <i class="fa-solid fa-angles-up"></i>
+    </a>
+     <section id="redes">
+        <section id="productos" class="productos">
+            <div class="products-container">
+                <table class="products-table">
+                    <tr>
+                        <th>Información</th>
+                        <th>Artículos</th>
+                        <th>Guías</th>
+                        <th>Soporte</th>
+                        <th>Nosotros</th>
+                    </tr>
+                    <tr>
+                        <td><a href="novedades.html">Novedades</a></td>
+                        <td><a href="welcometop.html">Ranking</a></td>
+                        <td><a href="armapc.html">Arma tu PC</a></td>
+                        <td><a href="formu.html">Formulario</a></td>
+                        <td><a href="contacto.html">Contacto</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"></a></td>
+                        <td><a href="graficorank.html">Gráficos</a></td>
+                        <td><a href="recomendaciones.html">Tips</a></td>
+                        <td><a href="preguntas.html">FAQs</a></td>
+                        <td><a href="#"></a></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        
+    <div class="redes">
+        <a href="https://www.youtube.com/@InnovaComputech"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://wa.me/59160400151?text=Hola,%20vi%20la%20pagina%20web%20quisiera%20asesoramiento%20en%20computadoras"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+</section>
+</footer>
+<script src="script1.js"></script>   
+<script>// Gráfico de PCs
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['PC Gaming Xtreme', 'PC Creator Pro', 'PC Gamer Elite'],
+            datasets: [{
+                label: 'Puntuación de Rendimiento',
+                data: [95, 80, 50],
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.6)',
+                    'rgba(153, 102, 255, 0.6)',
+                    'rgba(255, 159, 64, 0.6)'
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Puntuación'
+                    }
+                }
+            },
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Rendimiento de PCs'
+                }
+            }
+        }
+    });
+    
+    // Gráfico de Gráficas
+    const ctx1 = document.getElementById('myChart1').getContext('2d');
+    const myChart1 = new Chart(ctx1, {
+        type: 'bar',
+        data: {
+            labels: ['NVIDIA RTX 3080', 'AMD RX 6800 XT', 'NVIDIA RTX 3070'],
+            datasets: [{
+                label: 'Puntuación de Rendimiento',
+                data: [10, 60, 85],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.6)',
+                    'rgba(0, 128, 0, 0.6)',
+                    'rgba(0, 255, 255, 0.6)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 0.6)',
+                    'rgba(0, 128, 0, 0.6)',
+                    'rgba(0, 255, 255, 0.6)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Puntuación'
+                    }
+                }
+            },
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Rendimiento de Gráficas'
+                }
+            }
+        }
+    });
+    
+    // Gráfico de Laptops
+    const ctx2 = document.getElementById('myChart2').getContext('2d');
+    const myChart2 = new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: ['Laptop Gamer Xtreme', 'Laptop Creativa Pro', 'Laptop Oficina Elite'],
+            datasets: [{
+                label: 'Puntuación de Rendimiento',
+                data: [40, 88, 50],
+                backgroundColor: [
+                    'rgba(255, 215, 0, 0.6)',
+                    'rgba(50, 205, 50, 0.6)',
+                    'rgba(255, 0, 255, 0.6)'
+                ],
+                borderColor: [
+                    'rgba(255, 215, 0, 0.6)',
+                    'rgba(50, 205, 50, 0.6)',
+                    'rgba(255, 0, 255, 0.6)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Puntuación'
+                    }
+                }
+            },
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Rendimiento de Laptops'
+                }
+            }
+        }
+    });
+</script>   
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC TECH - Expertos en Reparación de Computadoras</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/63040c5298.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="/index.html"><img src="https://res.cloudinary.com/dum4okaqx/image/upload/v1732220316/LOGO2_dclip5.png" alt="PC TECH Logo"></a>
+                    <h1>PC TECH</h1>
+                </div>
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="services.html">Servicios</a></li>
+                    <li><a href="advertisements.html">Promociones</a></li>
+                    <li><a href="about.html">Nosotros</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <!-- <li><a href="admin_login.php" class="login-icon"><i class="fa-solid fa-user"></i></a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>Nuestros Anuncios y Promociones</h2>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="content">
+                <div class="slider-container">
+                    <img src="https://res.cloudinary.com/dum4okaqx/image/upload/v1730912054/kms7wzno5gmh8gwvxzby.gif"
+                        alt="" class="slider-item">
+                    <img src="https://res.cloudinary.com/dum4okaqx/image/upload/v1730912053/tp7kk5qv9kgaysdxkqrw.gif"
+                        alt="" class="slider-item">
+                    <img src="https://res.cloudinary.com/dum4okaqx/image/upload/v1730912049/rhctp59c1kekqrfamn2n.gif"
+                        alt="" class="slider-item">
+                    <img src="https://res.cloudinary.com/dum4okaqx/image/upload/v1730912047/fmbkg50qixdl8rn2dpvs.gif"
+                        alt="" class="slider-item">
+                    <img src="https://res.cloudinary.com/dum4okaqx/image/upload/v1730912047/xtvlzkvugi0zepbn6p4q.gif"
+                        alt="" class="slider-item">
+                </div>
+                <div class="navigation">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="video">
+            <div class="container">
+                    <video controls>
+                        <source src="https://res.cloudinary.com/dum4okaqx/video/upload/v1731971983/cross_ldyepo.mp4">
+                    </video>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 PC TECH - Todos los derechos reservados</p>
+            <!-- <ul class="social-links">
+                <li><a href="#" class="icon-facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#" class="icon-twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" class="icon-instagram"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul> -->
+        </div>
+    </footer>
+
+    <script>
+        //menu hamburguesa
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector("nav ul");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        // Cerrar el menú cuando se hace clic en un enlace
+        document.querySelectorAll("nav ul li a").forEach((link) => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            });
+        });
+
+        //slider
+        let currentIndex = 0;
+        const images = document.querySelectorAll(".slider-item");
+        const totalImages = images.length;
+
+        document.querySelector(".next").addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateSlider();
+        });
+
+        document.querySelector(".prev").addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateSlider();
+        });
+
+        function updateSlider() {
+            images.forEach((img, index) => {
+                img.classList.remove("active");
+                if (index === currentIndex) {
+                    img.classList.add("active");
+                }
+            });
+        }
+
+        // Cambio automático cada 3 segundos
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateSlider();
+        }, 3000);
+    </script>
+</body>
+
+</html>
